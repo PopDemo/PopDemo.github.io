@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=3108016905,3565452885&fm=26&gp=0.jpg">
 <meta property="article:published_time" content="2020-02-10T01:06:15.000Z">
-<meta property="article:modified_time" content="2020-02-10T02:26:36.329Z">
+<meta property="article:modified_time" content="2020-02-10T02:33:52.861Z">
 <meta property="article:author" content="PopDemo">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -190,25 +190,12 @@
 <li>3.通过“键”找到对应的值来获取到自己想要的数据</li>
 <li>4.你拿到的值是“字典“格式，所以当你在放入文档时必须要转换为集合的格式</li>
 </ul>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>item = [</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>​        dat.get(‘userid’),<br>​        dat.get(‘province’),<br>​        dat.get(‘city’),<br>​        dat.get(‘height’),<br>​        dat.get(‘username’),<br>​        dat.get(‘monolog’),</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>]</p>
-</blockquote>
-</blockquote>
-</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">item = [</span><br><span class="line"></span><br><span class="line">       dat.get(<span class="string">'userid'</span>),</span><br><span class="line"></span><br><span class="line">       dat.get(<span class="string">'province'</span>),</span><br><span class="line"></span><br><span class="line">       dat.get(<span class="string">'city'</span>),</span><br><span class="line"></span><br><span class="line">       dat.get(<span class="string">'height'</span>),</span><br><span class="line"></span><br><span class="line">       dat.get(<span class="string">'username'</span>),</span><br><span class="line"></span><br><span class="line">       dat.get(<span class="string">'monolog'</span>),</span><br><span class="line"></span><br><span class="line">         ]</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>4-1：使用更快捷更ok 的方法</li>
 </ul>
-<p>​          //这里的*也可以称之为解包，也就是去除 [ ] 这个外壳来进行过去到值</p>
+<p>​          //这里的*也可以称之为解包，也就是去除 [ ] 这个外壳来获取到值</p>
 <p>  Item = [*dat.value]</p>
 <p> save_test = (Str(item)）//转换为Str格式，之后进入传入文档</p>
 <h1 id="二．将爬取的数据放置在文档内"><a href="#二．将爬取的数据放置在文档内" class="headerlink" title="二．将爬取的数据放置在文档内"></a>二．将爬取的数据放置在文档内</h1><ul>
