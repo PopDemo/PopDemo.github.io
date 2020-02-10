@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>属于PopDemo的第一篇文章 | PopDemo_Blog</title>
+  <title>关于爬虫的流程和原理 | PopDemo_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="PopDemo给自己的一段话：首先庆祝自己获得第一个博客，虽然寄托在Github旗下，但是已经非常不错了 加油，继续努力！ 相信自己！excerpt_link: more 你要继续学习的语言 JAVA Python(继续学习一下Scrapy框架) VUE(学习基础)给自己和来者的一句话基础不牢，地动山摇！！！">
+  <meta name="description" content="一． 爬取数据流程 1.在网页中找到类似于url&#x3D;’http:&#x2F;&#x2F;www.7799520.com&#x2F;api&#x2F;user&#x2F;pc&#x2F;list&#x2F;search?marry&#x3D;1&amp;page&#x3D;9&#39;  ​       这种的网站会给我们返回一个类似于元组的数据来进行  2.requests.get(“地址”) 这个后的get是通过你当前网页的提交方式来进行决定 3.通过“键”找到对应的值来获取到自己想要">
 <meta property="og:type" content="article">
-<meta property="og:title" content="属于PopDemo的第一篇文章">
-<meta property="og:url" content="http://yoursite.com/2020/02/02/%E5%B1%9E%E4%BA%8EPopDemo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:title" content="关于爬虫的流程和原理">
+<meta property="og:url" content="http://yoursite.com/2020/02/10/%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B%E5%92%8C%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="PopDemo_Blog">
-<meta property="og:description" content="PopDemo给自己的一段话：首先庆祝自己获得第一个博客，虽然寄托在Github旗下，但是已经非常不错了 加油，继续努力！ 相信自己！excerpt_link: more 你要继续学习的语言 JAVA Python(继续学习一下Scrapy框架) VUE(学习基础)给自己和来者的一句话基础不牢，地动山摇！！！">
+<meta property="og:description" content="一． 爬取数据流程 1.在网页中找到类似于url&#x3D;’http:&#x2F;&#x2F;www.7799520.com&#x2F;api&#x2F;user&#x2F;pc&#x2F;list&#x2F;search?marry&#x3D;1&amp;page&#x3D;9&#39;  ​       这种的网站会给我们返回一个类似于元组的数据来进行  2.requests.get(“地址”) 这个后的get是通过你当前网页的提交方式来进行决定 3.通过“键”找到对应的值来获取到自己想要">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-02T05:31:28.000Z">
-<meta property="article:modified_time" content="2020-02-08T05:56:43.645Z">
+<meta property="og:image" content="http://img2.imgtn.bdimg.com/it/u=3108016905,3565452885&fm=26&gp=0.jpg">
+<meta property="article:published_time" content="2020-02-10T01:06:15.000Z">
+<meta property="article:modified_time" content="2020-02-10T02:26:36.329Z">
 <meta property="article:author" content="PopDemo">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://img2.imgtn.bdimg.com/it/u=3108016905,3565452885&fm=26&gp=0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="PopDemo_Blog" type="application/atom+xml">
   
@@ -158,34 +161,74 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-属于PopDemo的第一篇文章" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-关于爬虫的流程和原理" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      属于PopDemo的第一篇文章
+      关于爬虫的流程和原理
     </h1>
   
 
         
-        <a href="/2020/02/02/%E5%B1%9E%E4%BA%8EPopDemo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-02-02T05:31:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-02</time>
+        <a href="/2020/02/10/%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B%E5%92%8C%E5%8E%9F%E7%90%86/" class="archive-article-date">
+  	<time datetime="2020-02-10T01:06:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="PopDemo"><a href="#PopDemo" class="headerlink" title="PopDemo"></a>PopDemo</h1><h3 id="给自己的一段话："><a href="#给自己的一段话：" class="headerlink" title="给自己的一段话："></a>给自己的一段话：</h3><pre><code>首先庆祝自己获得第一个博客，虽然寄托在Github旗下，但是已经非常不错了
-加油，继续努力！
-相信自己！</code></pre><p>excerpt_link: more</p>
-<h3 id="你要继续学习的语言"><a href="#你要继续学习的语言" class="headerlink" title="你要继续学习的语言"></a>你要继续学习的语言</h3><ul>
-<li>JAVA</li>
-<li>Python(继续学习一下Scrapy框架)</li>
-<li>VUE(学习基础)<h4 id="给自己和来者的一句话"><a href="#给自己和来者的一句话" class="headerlink" title="给自己和来者的一句话"></a>给自己和来者的一句话</h4><pre><code>基础不牢，地动山摇！！！</code></pre></li>
+        <h1 id="一．-爬取数据流程"><a href="#一．-爬取数据流程" class="headerlink" title="一． 爬取数据流程"></a>一． 爬取数据流程</h1><ul>
+<li>1.在网页中找到类似于url=’<a href="http://www.7799520.com/api/user/pc/list/search?marry=1&amp;page=9&#39;" target="_blank" rel="noopener">http://www.7799520.com/api/user/pc/list/search?marry=1&amp;page=9&#39;</a></li>
 </ul>
+<p>​       这种的网站会给我们返回一个类似于元组的数据来进行</p>
+<ul>
+<li>2.requests.get(“地址”) 这个后的get是通过你当前网页的提交方式来进行决定</li>
+<li>3.通过“键”找到对应的值来获取到自己想要的数据</li>
+<li>4.你拿到的值是“字典“格式，所以当你在放入文档时必须要转换为集合的格式</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>item = [</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>​        dat.get(‘userid’),<br>​        dat.get(‘province’),<br>​        dat.get(‘city’),<br>​        dat.get(‘height’),<br>​        dat.get(‘username’),<br>​        dat.get(‘monolog’),</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>]</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>4-1：使用更快捷更ok 的方法</li>
+</ul>
+<p>​          //这里的*也可以称之为解包，也就是去除 [ ] 这个外壳来进行过去到值</p>
+<p>  Item = [*dat.value]</p>
+<p> save_test = (Str(item)）//转换为Str格式，之后进入传入文档</p>
+<h1 id="二．将爬取的数据放置在文档内"><a href="#二．将爬取的数据放置在文档内" class="headerlink" title="二．将爬取的数据放置在文档内"></a>二．将爬取的数据放置在文档内</h1><ul>
+<li>1.通过函数的方式进行获取到值，</li>
+</ul>
+<p>defsave_test(dat):</p>
+<p>然后with也就是操作系统文档，然后不使用时，自动close<br>​    with<br>open(‘DemoByJson.test’,’a’,encoding=’utf-8’) as f:<br>​        f.write(dat+”\n”)</p>
+<ul>
+<li>2 ．<em>最重要的“点”</em></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if  __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line"></span><br><span class="line">   jsondata &#x3D; getJson()</span><br><span class="line"></span><br><span class="line">   param(jsondata)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>你不是使用这个判定系统不会进入你的函数内</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">If  __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br></pre></td></tr></table></figure>
+
+<h4 id="这里的意思是："><a href="#这里的意思是：" class="headerlink" title="这里的意思是："></a>这里的意思是：</h4><p>​           当你当前这个py文件进行编译时，也就是当前的<strong>name</strong>已经改编为main，也就是你当前这个文件编译中！！！！</p>
+<hr>
+<p><img src="http://img2.imgtn.bdimg.com/it/u=3108016905,3565452885&fm=26&gp=0.jpg" alt="img"></p>
 
       
 
@@ -194,6 +237,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -244,7 +298,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/02/%E5%B1%9E%E4%BA%8EPopDemo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/10/%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B%E5%92%8C%E5%8E%9F%E7%90%86/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -258,15 +312,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Python的基础语法的总结
-        
-      </div>
-    </a>
   
+    <a href="/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python的基础语法的总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
