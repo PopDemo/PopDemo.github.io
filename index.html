@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="PopDemo_Blog">
 <meta property="og:description" content="Ŀǰ����ѧ��һö��Ϊ�����Ժ��������ͣ�Ŀ�꣺ȫջ">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="PopDemo">
 <meta name="twitter:card" content="summary">
   
@@ -237,6 +237,54 @@
 
 
 
+
+    <div id="comment"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'Dear, please comment!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+</script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'ヾﾉ≧∀≦)o欢迎评论!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+    }
+    });
+</script>
+    
+
   
     <article id="post-linux终端常用的命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -321,6 +369,54 @@
 
 
 
+
+
+    <div id="comment"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'Dear, please comment!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+</script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'ヾﾉ≧∀≦)o欢迎评论!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+    }
+    });
+</script>
+    
 
   
     <article id="post-关于爬虫的流程和原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
@@ -408,6 +504,54 @@
 
 
 
+
+    <div id="comment"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'Dear, please comment!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+</script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'ヾﾉ≧∀≦)o欢迎评论!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+    }
+    });
+</script>
+    
+
   
     <article id="post-Python的基础语法的总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -487,6 +631,54 @@
 
 
 
+
+    <div id="comment"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'Dear, please comment!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+</script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'ヾﾉ≧∀≦)o欢迎评论!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+    }
+    });
+</script>
+    
+
   
     <article id="post-属于PopDemo的第一篇文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -558,6 +750,54 @@
 
 
 
+
+    <div id="comment"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'Dear, please comment!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+</script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'ヾﾉ≧∀≦)o欢迎评论!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+    }
+    });
+</script>
+    
+
   
   
 
@@ -577,18 +817,8 @@
     </div>
   </div>
   
-        <!-- ������ͳ�� -->
-        <span id="busuanzi_container_site_pv">
-                ��վ�ܷ�����<span id="busuanzi_value_site_pv"></span>��
-        </span>
-        <span class="post-meta-divider">|</span>
-        <span id="busuanzi_container_site_uv" style='display:none'>
-                ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>��
-        </span>
-        <script async src="/busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  
 </footer>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     </div>
     <script>
 	var yiliaConfig = {

@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/2020/02/17/%E8%B0%88%E8%B0%88%E7%8C%BF%E7%9A%84%E2%80%9C%E8%87%AA%E5%AD%A6%E2%80%9D/index.html">
 <meta property="og:site_name" content="PopDemo_Blog">
 <meta property="og:description" content="谝闲传（陕西话：唠唠嗑）讲故事​      博主的自学开始也是在别人的引导下开始的，以前我的phone上全是潮流（拌合）的软件 &amp;emsp;&amp;emsp;&amp;emsp;给大家bb几个phone上的流量app ​             &amp;emsp;&amp;emsp;1.某音（简直真的是丧良心浪费时间啊,我没有自学开始时,我的抖音占据了我的百分之70的时间,真的可怕至极，大年30的晚上直接 delete） ​">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDHhIIP5nvD6uK7aHVSPUdNgtovf2*1QWW5PSnQXpHr6f*YsX6JrSqvlVL4mnRK2d7mQxsb4cZwEHPxOks6nG75c!/b&bo=UgJQAgAAAAARBzI!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDKRpL3elWESxEHWDilWcgipQ9hq0tIzLARsZ3LON9UyADQQJhQpmLax*yu*O6zdTYnGp6NgXEItfb0vMBDhcVBY!/b&bo=wANWAwAAAAARF7Y!&rf=viewer_4">
 <meta property="article:published_time" content="2020-02-17T07:19:59.000Z">
@@ -175,11 +175,6 @@
 
         
         
-        <!-- ������ͳ�� -->
-        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
-              <i class="icon-smile icon"></i> �Ķ�����<span id="busuanzi_value_page_pv"></span>��
-        </span>
-
 <a href="/2020/02/17/%E8%B0%88%E8%B0%88%E7%8C%BF%E7%9A%84%E2%80%9C%E8%87%AA%E5%AD%A6%E2%80%9D/" class="archive-article-date">
   	<time datetime="2020-02-17T07:19:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
 </a>
@@ -350,6 +345,54 @@
   
 
 
+
+    <div id="comment"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'Dear, please comment!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+</script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'ヾﾉ≧∀≦)o欢迎评论!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+    }
+    });
+</script>
+    
+
           </div>
         </div>
       </div>
@@ -365,18 +408,8 @@
     </div>
   </div>
   
-        <!-- ������ͳ�� -->
-        <span id="busuanzi_container_site_pv">
-                ��վ�ܷ�����<span id="busuanzi_value_site_pv"></span>��
-        </span>
-        <span class="post-meta-divider">|</span>
-        <span id="busuanzi_container_site_uv" style='display:none'>
-                ��վ�ÿ���<span id="busuanzi_value_site_uv"></span>��
-        </span>
-        <script async src="/busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  
 </footer>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     </div>
     <script>
 	var yiliaConfig = {
