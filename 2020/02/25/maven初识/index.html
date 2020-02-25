@@ -6,17 +6,45 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | PopDemo_Blog</title>
+  <title>maven初识 | PopDemo_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Ŀǰ����ѧ��һö��Ϊ�����Ժ��������ͣ�Ŀ�꣺ȫջ">
-<meta property="og:type" content="website">
-<meta property="og:title" content="PopDemo_Blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="maven&amp;emsp;&amp;emsp;随着时间的磨逝，我离我的职业生涯有更进了一步，最近开整了maven这个爸爸，来进行整理我的项目，使我的项目更加的整齐，同时我也可以同过maven的分模块进行编译我们java后端的三个老大哥，接下来分享一下如何安装以及去使用分模块的maven &amp;emsp;一.安装&amp;emsp;&amp;emsp;&amp;emsp;1：需要准备的东西&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="maven初识">
+<meta property="og:url" content="http://yoursite.com/2020/02/25/maven%E5%88%9D%E8%AF%86/index.html">
 <meta property="og:site_name" content="PopDemo_Blog">
-<meta property="og:description" content="Ŀǰ����ѧ��һö��Ϊ�����Ժ��������ͣ�Ŀ�꣺ȫջ">
+<meta property="og:description" content="maven&amp;emsp;&amp;emsp;随着时间的磨逝，我离我的职业生涯有更进了一步，最近开整了maven这个爸爸，来进行整理我的项目，使我的项目更加的整齐，同时我也可以同过maven的分模块进行编译我们java后端的三个老大哥，接下来分享一下如何安装以及去使用分模块的maven &amp;emsp;一.安装&amp;emsp;&amp;emsp;&amp;emsp;1：需要准备的东西&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDAYkTffx96S6XlALD3F7iuFWv2e72Xtren.jAzNb3bodR4vT1qL*uvq2Q1KhOvQhHzOK*4cdu5fBUV.U3hWTqkY!/b&bo=OgZNAQAAAAADF0I!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDFpRn*qiyrRX6KI461Q.bj*LE9bxS4MbVV9GIljM8wJlZVodaPdOxw9uQYYySIUazSEepU9dpL2rOtB9g2tl3Fo!/b&bo=0gQqAwAAAAADF80!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDI0O75QhKD7JmlbEEV1A8ZswxHkhheTxuQ0ldfmaNhvalFp7kLPXI4kvSXRyQqB8DKgb0sS7JEXz*k.L9BjFawU!/b&bo=HQI6AgAAAAADFxU!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDOk*mhlHcEMV63*C4CDpLFwWz7mKxzEnuE5bXFu4hgQ9BA0CXBCfSqdyKREMTXy1S4j5Gsh8VFaD4Nh*qKA1Mas!/b&bo=TgPoAAAAAAADF5c!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDKcQQ0ARd8VRquAunCN.ys4RhhatD6EuMe9Rh07rZXJ9E6*OEcVzlBdzSUnMkudp.AX.GI8orF5Vl5Bo.Lk0OGM!/b&bo=KgIPAQAAAAADFxQ!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDH6szE0QOp2RHsLHWmwXbQwXNOioy7IvL6JUXUCmUWogGIs2mD99tpWy.MlxPaPhqVvljB44y14lYBEOmUMXlRw!/b&bo=KgIPAQAAAAADFxQ!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDMQG7t7DCkaIdY0*0lOZLBUTwjeUErU5ZSXL8EKrUSmuFrD.AlxkMWZdcj8Rgs54XT4kTmmNbS6kr16Uu5XCmfI!/b&bo=KgIPAQAAAAADFxQ!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDIMDF6mGzWM9oAH15jK3lQb*gZHa1357gshiAK0MeFXEhbnPsQPzzNx3.l7U..DKJRtWz*N6K0lLVjJ0kXvmWQU!/b&bo=iAFIAQAAAAADF*I!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDIZYQzjhOMFaZGEvEs3bb7JQAsY6uhygl63n1OMK4b05IH9P3sK6tx2rNhJd55IA8PDm0qmgEueZJ.qK3zYiuaM!/b&bo=kQEOAQAAAAADF60!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDDqRc5N149Xlo.xSk7i5GGgbf.KxGO.ogTEP03zDQnvyvsLK1BDRaKVLwJN3dWbGPhdOme*rwW.4Qw1tctl9WjA!/b&bo=KQLVAAAAAAADF8w!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDMmhOgBPSTG6y9bj1*DJslVVqXoWT4lE021Pm8P9a16JqdF1HXqKWAISmi0O6umbvWNpiHFLQB4j9pUMb7GkWWY!/b&bo=KQJeAQAAAAADB1Y!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDF.TYdNoeO22rkRCl1jrSBOrz4r73SrnpjjDOdxD6PL*rr0Rxz7McngMBvoxYA3tQQVip1h4Q4uKcUr*CKuRDWM!/b&bo=1AHkAAAAAAADBxM!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDCJwLpl8W*79sERKYxChMsjfTd5bQwAuQFWSc*2wr75x4GhUXYwUknWGYXdXuAQg7*W.vkID4RvbHd*FPnPUoOQ!/b&bo=sAGcAAAAAAADFx8!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDMrx8ti9iC5.qeBo4fvk69X4j3zIG2YAEWMFLMGawpWuhyulKo0vKe6SPRol5Q*8hPDZaWQxYayObAlsFuirVtY!/b&bo=KQI7AQAAAAADBzM!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDBDcr1DcY2SEHkH*TVZkSDrNKGCm1nSe0o*3J12Le2i.cI5iaSoivsLonhRTVsA0*q1BIWokQZgQDGI8dNJZcak!/b&bo=KQIzAQAAAAADBzs!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDNb*Gs0*6g5ocMvzHQr2WfPaEDXX3xuOz4suBrWo0sBPeuwjq5iXG7cbC2imuAFpRgHlhFI6PBlI5QvsKNc5BnQ!/b&bo=KgLEAAAAAAADB84!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDPlYFZIv8aFdIhVyaMRSdCpdqOzF4ms9ijEaBgsYRtRkfOXNHyMP8jjof3qc8M89GCbo2PnmSZ0PRAdrxyo2TIc!/b&bo=mgE4AQAAAAADB4A!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDMmhOgBPSTG6y9bj1*DJslVVqXoWT4lE021Pm8P9a16JqdF1HXqKWAISmi0O6umbvWNpiHFLQB4j9pUMb7GkWWY!/b&bo=KQJeAQAAAAADB1Y!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDDiObCFrdum5mc1Jnf2z9cH5NAbPdjHq8yzAiKP1FCAWygZ9rm3uy7tbVbWvatBmnPVHry8xBW6qvcAW6KRrT3A!/b&bo=.QHxAAAAAAADBys!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDLPgvFf5wEOhY537VXu7adTWKO6xEp03Kj2xSYPQycGDRK82BsIfIRIsgNSYtN8QlojKLp9KV4YOwUZKkOGRc5E!/b&bo=KgKRAQAAAAADB5o!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDIi2fK62wETgvA2wH9nUMNlBzXnoBGimQeVgpVe1SQMmUqaCoDpWBUX51kDLtu2u4vXNIQnhJTi.lmqqY.DZvO0!/b&bo=KQJYAQAAAAADB1A!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDF.TYdNoeO22rkRCl1jrSBOrz4r73SrnpjjDOdxD6PL*0Cf*XSnlluvzTohO1.bFW52eSoP71A7fp.V3POZSQEc!/b&bo=1AHkAAAAAAADBxM!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDCJwLpl8W*79sERKYxChMsjfTd5bQwAuQFWSc*2wr75x4GhUXYwUknWGYXdXuAQg7*W.vkID4RvbHd*FPnPUoOQ!/b&bo=sAGcAAAAAAADFx8!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDKcQQ0ARd8VRquAunCN.ys4RhhatD6EuMe9Rh07rZXJ9E6*OEcVzlBdzSUnMkudp.AX.GI8orF5Vl5Bo.Lk0OGM!/b&bo=KgIPAQAAAAADFxQ!&rf=viewer_4">
+<meta property="article:published_time" content="2020-02-25T10:53:39.000Z">
+<meta property="article:modified_time" content="2020-02-25T13:22:01.246Z">
 <meta property="article:author" content="PopDemo">
+<meta property="article:tag" content="maven">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDAYkTffx96S6XlALD3F7iuFWv2e72Xtren.jAzNb3bodR4vT1qL*uvq2Q1KhOvQhHzOK*4cdu5fBUV.U3hWTqkY!/b&bo=OgZNAQAAAAADF0I!&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="PopDemo_Blog" type="application/atom+xml">
   
@@ -156,37 +184,518 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-maven初识" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/25/maven%E5%88%9D%E8%AF%86/" class="archive-article-date">
-  	<time datetime="2020-02-25T10:53:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/25/maven%E5%88%9D%E8%AF%86/">maven初识</a>
+    <h1 class="article-title" itemprop="name">
+      maven初识
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+<a href="/2020/02/25/maven%E5%88%9D%E8%AF%86/" class="archive-article-date">
+  	<time datetime="2020-02-25T10:53:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="maven"><a href="#maven" class="headerlink" title="maven"></a>maven</h3><p>&emsp;&emsp;随着时间的磨逝，我离我的职业生涯有更进了一步，最近开整了maven这个爸爸，来进行整理我的项目，使我的项目更加的整齐，同时我也可以同过maven的分模块进行编译我们java后端的三个老大哥，接下来分享一下如何安装以及去使用分模块的maven</p>
+<h2 id="emsp-一-安装"><a href="#emsp-一-安装" class="headerlink" title="&emsp;一.安装"></a>&emsp;一.安装</h2><h4 id="emsp-emsp-emsp-1：需要准备的东西"><a href="#emsp-emsp-emsp-1：需要准备的东西" class="headerlink" title="&emsp;&emsp;&emsp;1：需要准备的东西"></a>&emsp;&emsp;&emsp;1：需要准备的东西</h4><p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;①  JDK</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;②IDEA（以最智能的IDEA为主题）</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;③Maven程序安装包</p>
+<a id="more"></a>
+
+<p>&emsp;&emsp;&emsp; 2. 前往<a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">https://maven.apache.org/download.cgi</a>下载最新版的Maven程序：<img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDAYkTffx96S6XlALD3F7iuFWv2e72Xtren.jAzNb3bodR4vT1qL*uvq2Q1KhOvQhHzOK*4cdu5fBUV.U3hWTqkY!/b&bo=OgZNAQAAAAADF0I!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp; 3.将文件解压到D:\Program Files\Apache\maven目录下:</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDFpRn*qiyrRX6KI461Q.bj*LE9bxS4MbVV9GIljM8wJlZVodaPdOxw9uQYYySIUazSEepU9dpL2rOtB9g2tl3Fo!/b&bo=0gQqAwAAAAADF80!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;&emsp; 4.新建环境变量MAVEN_HOME，赋值D:\Program Files\Apache\maven</p>
+<p>&emsp;&emsp;&emsp;&emsp; 5.编辑环境变量Path，追加%MAVEN_HOME%\bin;</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDI0O75QhKD7JmlbEEV1A8ZswxHkhheTxuQ0ldfmaNhvalFp7kLPXI4kvSXRyQqB8DKgb0sS7JEXz*k.L9BjFawU!/b&bo=HQI6AgAAAAADFxU!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;&emsp; 6.至此，maven已经完成了安装，我们可以通过DOS命令检查一下我们是否安装成功：</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDOk*mhlHcEMV63*C4CDpLFwWz7mKxzEnuE5bXFu4hgQ9BA0CXBCfSqdyKREMTXy1S4j5Gsh8VFaD4Nh*qKA1Mas!/b&bo=TgPoAAAAAAADF5c!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;这样maven的环境就ok了</p>
+<h3 id="emsp-二-创建maven项目"><a href="#emsp-二-创建maven项目" class="headerlink" title="&emsp;二.创建maven项目"></a>&emsp;二.创建maven项目</h3><p>&emsp;&emsp;&emsp;&emsp; 1.选择webapp骨架</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDKcQQ0ARd8VRquAunCN.ys4RhhatD6EuMe9Rh07rZXJ9E6*OEcVzlBdzSUnMkudp.AX.GI8orF5Vl5Bo.Lk0OGM!/b&bo=KgIPAQAAAAADFxQ!&rf=viewer_4" alt="img"></p>
+<p> &emsp;&emsp;&emsp;&emsp;2.配置maven 的GAV</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDH6szE0QOp2RHsLHWmwXbQwXNOioy7IvL6JUXUCmUWogGIs2mD99tpWy.MlxPaPhqVvljB44y14lYBEOmUMXlRw!/b&bo=KgIPAQAAAAADFxQ!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;&emsp;3.配置你的本地的maven库</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDMQG7t7DCkaIdY0*0lOZLBUTwjeUErU5ZSXL8EKrUSmuFrD.AlxkMWZdcj8Rgs54XT4kTmmNbS6kr16Uu5XCmfI!/b&bo=KgIPAQAAAAADFxQ!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;3.配置你的本地的maven库</p>
+<p>&emsp;&emsp;&emsp;&emsp;4.最后一步———-&gt;进行false，创建完成</p>
+<p>###&emsp;三.你的maven项目全部文件解析(这个md没有编译过来布吉岛为什么)</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDIMDF6mGzWM9oAH15jK3lQb*gZHa1357gshiAK0MeFXEhbnPsQPzzNx3.l7U..DKJRtWz*N6K0lLVjJ0kXvmWQU!/b&bo=iAFIAQAAAAADF*I!&rf=viewer_4" alt="img"></p>
+<h3 id="emsp-四-maven多模块思想"><a href="#emsp-四-maven多模块思想" class="headerlink" title="&emsp;四.maven多模块思想"></a>&emsp;四.maven多模块思想</h3><p>&emsp;&emsp;&emsp;&emsp;1.概念！</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;继承：创建一个parent工程将所需的依赖都配置在pom中</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;聚合：聚合多个模块运行</p>
+<p>&emsp;&emsp;&emsp;&emsp;2.流程</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;2-1：1.  需求拆分</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Dao  service（zip）  web</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;何为继承：继承就是为了消除重复</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;何为聚合：项目开发通常是分组模块开发，每个模块开发完成要运行整个工程需要将每个模块聚合在一起运行</p>
+<h3 id="emsp-五，创建步骤"><a href="#emsp-五，创建步骤" class="headerlink" title="&emsp;五，创建步骤"></a>&emsp;五，创建步骤</h3><p>&emsp;&emsp;&emsp;1.创建父工程</p>
+<p>​                             <img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDIZYQzjhOMFaZGEvEs3bb7JQAsY6uhygl63n1OMK4b05IH9P3sK6tx2rNhJd55IA8PDm0qmgEueZJ.qK3zYiuaM!/b&bo=kQEOAQAAAAADF60!&rf=viewer_4" alt="img"></p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDDqRc5N149Xlo.xSk7i5GGgbf.KxGO.ogTEP03zDQnvyvsLK1BDRaKVLwJN3dWbGPhdOme*rwW.4Qw1tctl9WjA!/b&bo=KQLVAAAAAAADF8w!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;&emsp;2.将父工程发布至仓库</p>
+<p>​                             <img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDMmhOgBPSTG6y9bj1*DJslVVqXoWT4lE021Pm8P9a16JqdF1HXqKWAISmi0O6umbvWNpiHFLQB4j9pUMb7GkWWY!/b&bo=KQJeAQAAAAADB1Y!&rf=viewer_4" alt="img"></p>
+<p>&emsp;    &emsp;&emsp;<img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDF.TYdNoeO22rkRCl1jrSBOrz4r73SrnpjjDOdxD6PL*rr0Rxz7McngMBvoxYA3tQQVip1h4Q4uKcUr*CKuRDWM!/b&bo=1AHkAAAAAAADBxM!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;&emsp; 3.创建dao子模块(各模块只放和自己相关代码<font color="red">注意：选择骨架直接下一步！来进行编译子模块</font>)</p>
+<p> <img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDCJwLpl8W*79sERKYxChMsjfTd5bQwAuQFWSc*2wr75x4GhUXYwUknWGYXdXuAQg7*W.vkID4RvbHd*FPnPUoOQ!/b&bo=sAGcAAAAAAADFx8!&rf=viewer_4" alt="img"></p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDMrx8ti9iC5.qeBo4fvk69X4j3zIG2YAEWMFLMGawpWuhyulKo0vKe6SPRol5Q*8hPDZaWQxYayObAlsFuirVtY!/b&bo=KQI7AQAAAAADBzM!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;&emsp; 4.测试<img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDBDcr1DcY2SEHkH*TVZkSDrNKGCm1nSe0o*3J12Le2i.cI5iaSoivsLonhRTVsA0*q1BIWokQZgQDGI8dNJZcak!/b&bo=KQIzAQAAAAADBzs!&rf=viewer_4" alt="img"></p>
+<p> &emsp;&emsp;&emsp;&emsp; 上图报错的解决办法（将新建的模块 调至一样的JDK版本）</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDNb*Gs0*6g5ocMvzHQr2WfPaEDXX3xuOz4suBrWo0sBPeuwjq5iXG7cbC2imuAFpRgHlhFI6PBlI5QvsKNc5BnQ!/b&bo=KgLEAAAAAAADB84!&rf=viewer_4" alt="img"></p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDPlYFZIv8aFdIhVyaMRSdCpdqOzF4ms9ijEaBgsYRtRkfOXNHyMP8jjof3qc8M89GCbo2PnmSZ0PRAdrxyo2TIc!/b&bo=mgE4AQAAAAADB4A!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;&emsp;5.发布模块至本地仓库</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDMmhOgBPSTG6y9bj1*DJslVVqXoWT4lE021Pm8P9a16JqdF1HXqKWAISmi0O6umbvWNpiHFLQB4j9pUMb7GkWWY!/b&bo=KQJeAQAAAAADB1Y!&rf=viewer_4" alt="img">)<img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDDiObCFrdum5mc1Jnf2z9cH5NAbPdjHq8yzAiKP1FCAWygZ9rm3uy7tbVbWvatBmnPVHry8xBW6qvcAW6KRrT3A!/b&bo=.QHxAAAAAAADBys!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;&emsp;6.创建Biz子模块（<font color="red">注意：选择骨架直接下一步！来进行编译子模块</font>）</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDLPgvFf5wEOhY537VXu7adTWKO6xEp03Kj2xSYPQycGDRK82BsIfIRIsgNSYtN8QlojKLp9KV4YOwUZKkOGRc5E!/b&bo=KgKRAQAAAAADB5o!&rf=viewer_4" alt="img"></p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDIi2fK62wETgvA2wH9nUMNlBzXnoBGimQeVgpVe1SQMmUqaCoDpWBUX51kDLtu2u4vXNIQnhJTi.lmqqY.DZvO0!/b&bo=KQJYAQAAAAADB1A!&rf=viewer_4" alt="img"></p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDF.TYdNoeO22rkRCl1jrSBOrz4r73SrnpjjDOdxD6PL*0Cf*XSnlluvzTohO1.bFW52eSoP71A7fp.V3POZSQEc!/b&bo=1AHkAAAAAAADBxM!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;&emsp;7.创建Web模块</p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;7-1 .同时右击创建</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDCJwLpl8W*79sERKYxChMsjfTd5bQwAuQFWSc*2wr75x4GhUXYwUknWGYXdXuAQg7*W.vkID4RvbHd*FPnPUoOQ!/b&bo=sAGcAAAAAAADFx8!&rf=viewer_4" alt="img"></p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;7-2.选择web-app的骨架来进行创建</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDKcQQ0ARd8VRquAunCN.ys4RhhatD6EuMe9Rh07rZXJ9E6*OEcVzlBdzSUnMkudp.AX.GI8orF5Vl5Bo.Lk0OGM!/b&bo=KgIPAQAAAAADFxQ!&rf=viewer_4" alt="img"></p>
+<h3 id="emsp-附：maven管理的SSM项目的pom-xml文件解析"><a href="#emsp-附：maven管理的SSM项目的pom-xml文件解析" class="headerlink" title="&emsp;附：maven管理的SSM项目的pom.xml文件解析"></a>&emsp;附：maven管理的SSM项目的pom.xml文件解析</h3><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;project()xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+
+xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0
+
+http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+
+&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+&lt;!--项目解释--&gt;
+
+  &lt;groupId&gt;cn.popdemo&lt;/groupId&gt;
+
+&lt;artifactId&gt;maven_Demo01&lt;/artifactId&gt;
+
+&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+
+  &lt;packaging&gt;war&lt;/packaging&gt;
+
+
+
+  &lt;name&gt;maven_Demo01 Maven
+
+Webapp&lt;/name&gt;
+
+  &lt;!-- FIXME change it to the
+
+project&apos;s website --&gt;
+
+&lt;url&gt;http://www.example.com&lt;/url&gt;
+
+&lt;!--项目配置版本--&gt;
+
+  &lt;properties&gt;
+
+&lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+
+&lt;maven.compiler.source&gt;1.7&lt;/maven.compiler.source&gt;
+
+&lt;maven.compiler.target&gt;1.7&lt;/maven.compiler.target&gt;
+
+  &lt;/properties&gt;
+
+
+
+&lt;!--项目依赖的jar包--&gt;
+
+  &lt;dependencies&gt;
+
+&lt;!--test测试的包--&gt;
+&lt;dependency&gt;
+
+  &lt;groupId&gt;junit&lt;/groupId&gt;
+
+&lt;artifactId&gt;junit&lt;/artifactId&gt;
+&lt;version&gt;4.11&lt;/version&gt;
+
+  &lt;scope&gt;test&lt;/scope&gt;
+
+&lt;/dependency&gt;
+
+  &lt;!--json--&gt;
+
+  &lt;dependency&gt;
+  &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+
+&lt;artifactId&gt;jackson-annotations&lt;/artifactId&gt;
+
+&lt;version&gt;2.8.6&lt;/version&gt;
+&lt;/dependency&gt;
+
+  &lt;dependency&gt;
+
+
+     &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+
+&lt;artifactId&gt;jackson-core&lt;/artifactId&gt;
+
+     &lt;version&gt;2.8.1&lt;/version&gt;
+
+  &lt;/dependency&gt;
+
+  &lt;dependency&gt;
+ &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+
+&lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+
+&lt;version&gt;2.7.5&lt;/version&gt;
+
+ &lt;/dependency&gt;
+&lt;!--servlet-api的包（httprequest和respones中里使用）--&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+
+&lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+
+&lt;version&gt;3.1.0&lt;/version&gt;
+
+  &lt;scope&gt;provided&lt;/scope&gt;
+
+&lt;/dependency&gt;
+
+&lt;!-- Spring核心 --&gt;
+
+&lt;dependency&gt;
+
+  &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+&lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+
+&lt;version&gt;4.3.7.RELEASE&lt;/version&gt;
+
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+  &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+
+&lt;artifactId&gt;spring-beans&lt;/artifactId&gt;
+
+  &lt;version&gt;4.3.7.RELEASE&lt;/version&gt;
+
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+
+&lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+
+&lt;version&gt;4.2.5.RELEASE&lt;/version&gt;
+
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+
+  &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+&lt;artifactId&gt;spring-expression&lt;/artifactId&gt;
+
+&lt;version&gt;4.3.7.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+ &lt;groupId&gt;commons-dbcp&lt;/groupId&gt;
+
+&lt;artifactId&gt;commons-dbcp&lt;/artifactId&gt;
+ &lt;version&gt;1.4&lt;/version&gt;
+
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+&lt;groupId&gt;commons-pool&lt;/groupId&gt;
+
+&lt;artifactId&gt;commons-pool&lt;/artifactId&gt;
+  &lt;version&gt;1.6&lt;/version&gt;
+
+&lt;/dependency&gt;
+
+&lt;!--2. SpringDAO层依赖 --&gt;
+
+&lt;dependency&gt;
+  &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+  &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;
+&lt;version&gt;4.1.6.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+
+&lt;artifactId&gt;spring-tx&lt;/artifactId&gt;
+
+&lt;version&gt;4.3.7.RELEASE&lt;/version&gt;
+
+&lt;/dependency&gt;
+&lt;!--springWeb的依赖--&gt;
+&lt;dependency&gt;
+&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+
+&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
+
+&lt;version&gt;4.1.6.RELEASE&lt;/version&gt;
+
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+  &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
+  &lt;version&gt;4.1.3.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+&lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+
+&lt;artifactId&gt;fastjson&lt;/artifactId&gt;
+
+&lt;version&gt;1.2.62&lt;/version&gt;
+
+&lt;/dependency&gt;
+&lt;!--mybatis的依赖--&gt;
+&lt;dependency&gt;
+&lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+
+&lt;artifactId&gt;mybatis&lt;/artifactId&gt;
+
+&lt;version&gt;3.5.3&lt;/version&gt;
+
+&lt;/dependency&gt;
+&lt;!--MyBatis整合spring的适配包--&gt;
+&lt;dependency&gt;
+&lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+
+&lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt;
+
+&lt;version&gt;2.0.3&lt;/version&gt;
+
+&lt;/dependency&gt;
+
+&lt;dependency&gt;
+&lt;groupId&gt;commons-fileupload&lt;/groupId&gt;
+
+&lt;artifactId&gt;commons-fileupload&lt;/artifactId&gt;
+
+&lt;version&gt;1.3.1&lt;/version&gt;
+
+&lt;/dependency&gt;
+
+&lt;!--mysql数据库驱 --&gt;
+
+&lt;dependency&gt;
+
+  &lt;groupId&gt;mysql&lt;/groupId&gt;
+  &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+
+&lt;version&gt;5.1.41&lt;/version&gt;
+
+&lt;/dependency&gt;
+
+&lt;!--EL表达式--&gt;
+
+&lt;dependency&gt;
+&lt;groupId&gt;taglibs&lt;/groupId&gt;
+
+&lt;artifactId&gt;standard&lt;/artifactId&gt;
+
+  &lt;version&gt;1.1.2&lt;/version&gt;
+
+  &lt;type&gt;jar&lt;/type&gt;
+
+&lt;/dependency&gt;
+
+  &lt;dependency&gt;
+  &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+
+&lt;artifactId&gt;jstl&lt;/artifactId&gt;
+
+&lt;version&gt;1.2&lt;/version&gt;
+
+      &lt;type&gt;jar&lt;/type&gt;
+
+  &lt;/dependency&gt;
+
+  &lt;dependency&gt;
+
+   &lt;groupId&gt;taglibs&lt;/groupId&gt;
+   &lt;artifactId&gt;standard&lt;/artifactId&gt;
+   &lt;version&gt;1.1.2&lt;/version&gt;
+  &lt;/dependency&gt;
+  &lt;!--      jstl页面的依赖--&gt;
+  &lt;dependency&gt;
+  &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+
+&lt;artifactId&gt;jstl&lt;/artifactId&gt;
+
+&lt;version&gt;1.2&lt;/version&gt;
+
+  &lt;/dependency&gt;
+   &lt;/dependencies&gt;
+
+  &lt;build&gt;
+
+&lt;finalName&gt;maven_Demo01&lt;/finalName&gt;
+
+&lt;resources&gt;
+
+  &lt;!--指定xml文件位置--&gt;
+
+  &lt;resource&gt;
+  &lt;directory&gt;src/main/java&lt;/directory&gt;
+    &lt;includes&gt;
+
+      &lt;include&gt;*/.xml&lt;/include&gt;
+
+    &lt;/includes&gt;
+
+
+&lt;!--这里写成true会造成编译注释错误--&gt;
+&lt;filtering&gt;false&lt;/filtering&gt;
+  &lt;/resource&gt;
+
+&lt;/resources&gt;
+
+&lt;pluginManagement&gt;&lt;!-- lockdown plugins versions to avoid using Maven defaults (may be moved to parent
+
+pom) --&gt;
+
+  &lt;plugins&gt;
+
+    &lt;plugin&gt;
+    &lt;artifactId&gt;maven-clean-plugin&lt;/artifactId&gt;
+
+   &lt;version&gt;3.1.0&lt;/version&gt;
+    &lt;/plugin&gt;
+
+    &lt;!-- seehttp://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging
+
+--&gt;
+
+    &lt;plugin&gt;
+&lt;artifactId&gt;maven-resources-plugin&lt;/artifactId&gt;
+
+&lt;version&gt;3.0.2&lt;/version&gt;
+
+&lt;/plugin&gt;
+
+    &lt;plugin&gt;
+&lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+&lt;version&gt;3.8.0&lt;/version&gt;
+
+    &lt;/plugin&gt;
+
+    &lt;plugin&gt;
+&lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+
+&lt;version&gt;2.22.1&lt;/version&gt;
+
+&lt;/plugin&gt;
+
+    &lt;plugin&gt;
+&lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
+
+&lt;version&gt;3.2.2&lt;/version&gt;
+
+&lt;/plugin&gt;
+
+    &lt;plugin&gt;
+
+&lt;artifactId&gt;maven-install-plugin&lt;/artifactId&gt;
+
+&lt;version&gt;2.5.2&lt;/version&gt;
+&lt;/plugin&gt;
+
+    &lt;plugin&gt;
+&lt;artifactId&gt;maven-deploy-plugin&lt;/artifactId&gt;
+
+&lt;version&gt;2.8.2&lt;/version&gt;
+
+&lt;/plugin&gt;
+
+  &lt;/plugins&gt;
+
+&lt;/pluginManagement&gt;
+
+&lt;plugins&gt;
+
+  &lt;!-- tomcat插件控制 --&gt;
+
+  &lt;plugin&gt;
+&lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
+
+&lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
+
+&lt;version&gt;2.2&lt;/version&gt;
+
+&lt;configuration&gt;
+
+      &lt;!--端口控制--&gt;
+
+      &lt;port&gt;8060&lt;/port&gt;
+
+      !--项目路径控制意味着http://localhost:8080/abc--
+
+      &lt;path&gt;/abc&lt;/path&gt;
+
+      &lt;!--编码--&gt;</code></pre><p><uriEncoding>UTF-8</uriEncoding></p>
+<pre><code>  &lt;/configuration&gt;
+
+&lt;/plugin&gt;
+
+&lt;!-- maven插件控制 --&gt;
+
+
+
+&lt;plugin&gt;</code></pre><p><groupId>org.apache.maven.plugins</groupId></p>
+<p><artifactId>maven-compiler-plugin</artifactId></p>
+<p><version>3.1</version></p>
+<pre><code>&lt;configuration&gt;</code></pre><source>1.8</source>
+
+<p><target>1.8</target></p>
+<p><encoding>utf-8</encoding></p>
+<pre><code>    &lt;/configuration&gt;
+
+  &lt;/plugin&gt;
+
+
+
+&lt;/plugins&gt;</code></pre>  </build>
+
+
+
+
+
+</project>
+
+<p></code></pre></p>
+</details>s`
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -198,204 +707,143 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/25/maven%E5%88%9D%E8%AF%86/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/17/%E8%B0%88%E8%B0%88%E7%8C%BF%E7%9A%84%E2%80%9C%E8%87%AA%E5%AD%A6%E2%80%9D/" class="archive-article-date">
-  	<time datetime="2020-02-17T07:19:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/17/%E8%B0%88%E8%B0%88%E7%8C%BF%E7%9A%84%E2%80%9C%E8%87%AA%E5%AD%A6%E2%80%9D/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">谈谈猿的“自学”</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/17/%E8%B0%88%E8%B0%88%E7%8C%BF%E7%9A%84%E2%80%9C%E8%87%AA%E5%AD%A6%E2%80%9D/">谈谈猿的“自学”</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">谝闲传</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+
+  
+
+  
+
+
+
+    <div id="comment"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'Dear, please comment!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+    }
+    });
+</script>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/12/linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2020-02-12T12:30:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/12/linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/">linux终端常用的命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/10/%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B%E5%92%8C%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-02-10T01:06:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/10/%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B%E5%92%8C%E5%8E%9F%E7%90%86/">关于爬虫的流程和原理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-02-06T12:48:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/">Python的基础语法的总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/02/%E5%B1%9E%E4%BA%8EPopDemo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-02-02T05:31:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/02/%E5%B1%9E%E4%BA%8EPopDemo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">属于PopDemo的第一篇文章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
 
           </div>
         </div>
@@ -419,8 +867,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
