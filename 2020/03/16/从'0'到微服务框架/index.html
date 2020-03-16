@@ -6,20 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Python的基础语法的总结 | PopDemo_Blog</title>
+  <title>从&#39;0&#39;到微服务框架 | PopDemo_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Python基础语法（认真学习的猿,才能的到最后的果实!）&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;一，格式化常用的占位符1.“%”运算符就是用来格式化字符串的2.如果字符串中要表示%的时候必须打%%3.格式化字符串的方法是使用字符串的format()方法，它会用传入的参数依次替换符串内的占位符{0}、{1}……4.在字符串内部，%s表示用字符串替换，%d表示用整数替换，有几个%?占位符，后面就跟几个变量或者值">
+  <meta name="description" content="微服务 理解  背景  从头开发的网上超市！   当时  网站：  用户注册、登录功能 商品展示 下单   总体架构图">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python的基础语法的总结">
-<meta property="og:url" content="http://yoursite.com/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:title" content="从&#39;0&#39;到微服务框架">
+<meta property="og:url" content="http://yoursite.com/2020/03/16/%E4%BB%8E'0'%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/index.html">
 <meta property="og:site_name" content="PopDemo_Blog">
-<meta property="og:description" content="Python基础语法（认真学习的猿,才能的到最后的果实!）&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;一，格式化常用的占位符1.“%”运算符就是用来格式化字符串的2.如果字符串中要表示%的时候必须打%%3.格式化字符串的方法是使用字符串的format()方法，它会用传入的参数依次替换符串内的占位符{0}、{1}……4.在字符串内部，%s表示用字符串替换，%d表示用整数替换，有几个%?占位符，后面就跟几个变量或者值">
+<meta property="og:description" content="微服务 理解  背景  从头开发的网上超市！   当时  网站：  用户注册、登录功能 商品展示 下单   总体架构图">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-06T12:48:27.000Z">
-<meta property="article:modified_time" content="2020-02-16T05:41:09.171Z">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDHNZfTBOGNfP1iMbT0M6R5wLZx2U0i0HSZGIphcON51wGOT4tqzd*XGzoLYHM1BzqyFaTA1x*VJp86wUwhML9OM!/b&bo=TwJ9AQAAAAARFxE!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT.zpvQHazcRVyrCbJXnTUAqTx5Yt1v0rg2MKIH5TT5JV8XoDl8fQKKJr3yTIoY7bhQ!!/b&bo=OARlBQAAAAARB2w!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT.z*LTunIVoBPJGVPpDPrBR*NA.sS9L8XzRUIWadB*npVurorRtZIRaMfubv1G3dwg!!/b&bo=5QLrAQAAAAARBz0!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT2*uGS9tq*cwtxkkTbQl0AhODmhIQCRc2y0z.sRU1gO8dG*TTddQhewBKgOMm.bFlw!!/b&bo=swJtAgAAAAARB.4!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OTxXqXuMLGCrzpkk9yVFN*wCTWeunGy1Iji*NsDK5pCGDI41ImmZkvR8tnPMowpfx1A!!/b&bo=IgSpBAAAAAARB7s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OTwzMTiK65ZCC2lecq*Tt4Eg9oSOALTk.0VU2j.Ewu.X6obrFCm6CG4FTp8VLSABgNw!!/b&bo=kQFVAQAAAAARB*Q!&rf=viewer_4">
+<meta property="article:published_time" content="2020-03-16T09:06:53.000Z">
+<meta property="article:modified_time" content="2020-03-16T09:41:10.093Z">
 <meta property="article:author" content="PopDemo">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="微服务">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDHNZfTBOGNfP1iMbT0M6R5wLZx2U0i0HSZGIphcON51wGOT4tqzd*XGzoLYHM1BzqyFaTA1x*VJp86wUwhML9OM!/b&bo=TwJ9AQAAAAARFxE!&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="PopDemo_Blog" type="application/atom+xml">
   
@@ -159,120 +166,246 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Python的基础语法的总结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-从&#39;0&#39;到微服务框架" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Python的基础语法的总结
+      从&#39;0&#39;到微服务框架
     </h1>
   
 
         
         
-<a href="/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-02-06T12:48:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-06</time>
+<a href="/2020/03/16/%E4%BB%8E'0'%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/" class="archive-article-date">
+  	<time datetime="2020-03-16T09:06:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Python基础语法（认真学习的猿-才能的到最后的果实-）"><a href="#Python基础语法（认真学习的猿-才能的到最后的果实-）" class="headerlink" title="Python基础语法（认真学习的猿,才能的到最后的果实!）"></a>Python基础语法（认真学习的猿,才能的到最后的果实!）</h2><p>==============<br>一，格式化常用的占位符<br>1.“%”运算符就是用来格式化字符串的<br>2.如果字符串中要表示%的时候必须打%%<br>3.格式化字符串的方法是使用字符串的format()方法，它会用传入的参数依次替换符串内的占位符{0}、{1}……<br>4.在字符串内部，%s表示用字符串替换，%d表示用整数替换，有几个%?占位符，后面就跟几个变量或者值，顺序要对应好。如果只有一个%?，括号可以省略。<br>5.死知识</p>
-<hr>
-<p>  占位符——————– 替换内容</p>
+        <h1 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h1><ul>
+<li><p>理解</p>
+<ul>
+<li><p>背景</p>
+<ul>
+<li>从头开发的网上超市！</li>
+</ul>
+</li>
+<li><p>当时</p>
+<ul>
+<li><p>网站：</p>
+<ul>
+<li>用户注册、登录功能</li>
+<li>商品展示</li>
+<li>下单</li>
+</ul>
+</li>
+<li><p>总体架构图</p>
 <a id="more"></a>
-<hr>
-<pre><code>%d                         整数</code></pre><hr>
-<pre><code>%f                        浮点数</code></pre><hr>
-<pre><code>%s                        字符串</code></pre><hr>
-<pre><code>%x                     十六进制整数</code></pre><p>二，格式</p>
-<p>   1.在多个格化式字符中要把参数放进print（）括号里面</p>
-<ol start="2">
-<li>%.1f   这个意思就是去小数点后一位</li>
-<li>在控制台输入的东西要是int类型的时候必须要（s1=int(input(“请输入你要加入的数字”))</li>
-</ol>
-<p>三，list集合 </p>
-<p>​     0.可以把元素插入到指定的位置，比如索引号为1的位置：</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>classmates.insert(1, ‘Jack’)<br>classmates<br>[‘Michael’, ‘Jack’, ‘Bob’, ‘Tracy’, ‘Adam’] </p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>​    1.要删除list末尾的元素，用pop()方法</p>
+
+<ul>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDHNZfTBOGNfP1iMbT0M6R5wLZx2U0i0HSZGIphcON51wGOT4tqzd*XGzoLYHM1BzqyFaTA1x*VJp86wUwhML9OM!/b&bo=TwJ9AQAAAAARFxE!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>时间（变化）轴</p>
+<ul>
+<li>故事<ul>
+<li>小明和小皮一起创业做网上超市。小明负责程序开发，小皮负责其他事宜。当时互联网还不发达，网上超市还是蓝海。只要功能实现了就能随便赚钱。所以他们的需求很简单，只需要一个网站挂在公网，用户能够在这个网站上浏览商品、购买商品；另外还需一个管理后台，可以管理商品、用户、以及订单数据</li>
+</ul>
+</li>
+<li>随着时代，用户增长，渐渐发生——</li>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT.zpvQHazcRVyrCbJXnTUAqTx5Yt1v0rg2MKIH5TT5JV8XoDl8fQKKJr3yTIoY7bhQ!!/b&bo=OARlBQAAAAARB2w!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+<li><p>知识点简介</p>
+<ul>
+<li><p>抽象出公共服务</p>
+<ul>
+<li>理解<ul>
+<li>也就是抽象出公用的业务能力，来做成公共服务</li>
+</ul>
+</li>
+<li>图<ul>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT.z*LTunIVoBPJGVPpDPrBR*NA.sS9L8XzRUIWadB*npVurorRtZIRaMfubv1G3dwg!!/b&bo=5QLrAQAAAAARBz0!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>烟囱式系统</p>
+<ul>
+<li>缺点<ul>
+<li>数据库成为性能瓶颈，并且有单点故障的风险。</li>
+<li>数据管理趋向混乱。即使一开始有良好的模块化设计，随着时间推移，总会有一个服务直接从数据库取另一个服务的数据的现象。</li>
+<li>数据库表结构可能被多个服务依赖，牵一发而动全身，很难调整</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>监控—–发现故障的征兆</p>
+<ul>
+<li><p>实现步骤</p>
+<ul>
+<li>微服务架构中组件繁多，各个组件所需要监控的指标不同</li>
+<li>比如Redis缓存一般监控占用内存值、网络流量，数据库监控连接数、磁盘空间，业务服务监控并发数、响应延迟、错误率等</li>
+<li>因此如果做一个大而全的监控系统来监控各个组件是不大现实的，而且扩展性会很差  so↓</li>
+<li>一般的做法是让各个组件提供报告自己当前状态的接口（metrics接口），这个接口输出的数据格式应该是一致的。然后部署一个指标采集器组件，定时从这些接口获取并保持组件状态，同时提供查询服务。</li>
+<li>最后还需要一个UI，从指标采集器查询各项指标，绘制监控界面或者根据阈值发出告警</li>
+</ul>
+</li>
+<li><p>定位问题——链路跟踪</p>
+<ul>
+<li>理解<ul>
+<li>通过链路跟踪的方式来对用户调用某个服务时查看所调用的全部接口或服务，另外还需要调用日志收集与存储的组件，以展示链路调用的UI组件<ul>
+<li>这里的UI组件<ul>
+<li>请查找答案</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>网关—权限控制，服务治理</p>
+<ul>
+<li><p>背景</p>
+<ul>
+<li>拆分成微服务后，出现大量的服务，大量的接口，使得整个调用关系乱糟糟的</li>
+<li>经常在开发过程中，写着写着，忽然想不起某个数据应该调用哪个服务。或者写歪了，调用了不该调用的服务，本来一个只读的功能结果修改了数据……</li>
+</ul>
+</li>
+<li><p>解决调用错误接口服务</p>
+<ul>
+<li>so,微服务的调用需要一个把关的东西，也就是网关</li>
+<li>在调用者和被调用者中间加入一层网关，每次调用都会进入<code>权限校验</code>，同时，网关可以作为一个提供服务接口文档的平台</li>
+</ul>
+</li>
+<li><p>使用网关的粒度</p>
+<ul>
+<li>最粗力度<ul>
+<li>指整个微服务一个网关，</li>
+</ul>
+</li>
+<li>最细粒度<ul>
+<li>则是所有调用，不管是微服务内部，调用过着来自外部服务的调用，都要通过网关</li>
+</ul>
+</li>
+<li>折中方案<ul>
+<li>按照业务领域将微服务分成几个区，区内直接调用，区间通过网关调用</li>
+</ul>
+</li>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT2*uGS9tq*cwtxkkTbQl0AhODmhIQCRc2y0z.sRU1gO8dG*TTddQhewBKgOMm.bFlw!!/b&bo=swJtAgAAAAARB.4!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+<li><p>熔断，服务降级，限流</p>
+<ul>
+<li><p>熔断</p>
+<ul>
+<li>理解<ul>
+<li>当一个服务因为各种原因停止响应时，调用方通常会等待一段时间或者收到了错误返回</li>
+<li>如果调用链路必将长，可能会导致请求堆积，整条链路占用大量资源一直在等待下游（也就是基层）的响应，</li>
+<li>so</li>
+<li>当我们多次访问一个服务失败时，我们应该熔断，标记该服务已停止工作</li>
+</ul>
+</li>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OTxXqXuMLGCrzpkk9yVFN*wCTWeunGy1Iji*NsDK5pCGDI41ImmZkvR8tnPMowpfx1A!!/b&bo=IgSpBAAAAAARB7s!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+<li><p>服务降级</p>
+<ul>
+<li>背景    <ul>
+<li>当下游的服务停止工作后，如果该服务并非核心业务，则上有服务应该降级，以保证核心业务不中断</li>
+</ul>
+</li>
+<li>实例<ul>
+<li>网上超市的下单页面有一个推荐商品凑单的功能，当该模块挂了后，只需要暂时关闭推荐功能即可</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>限流</p>
+<ul>
+<li><p>当一个服务挂掉后，用户会习惯性的进行重复访问，，这导致一旦服务恢复正常很可能瞬间error</p>
+</li>
+<li><p><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OTwzMTiK65ZCC2lecq*Tt4Eg9oSOALTk.0VU2j.Ewu.X6obrFCm6CG4FTp8VLSABgNw!!/b&bo=kQFVAQAAAAARB*Q!&rf=viewer_4" alt="img"></p>
+</li>
+<li><p>so</p>
+<ul>
+<li><p>服务里需要自我保护–也就是限流，</p>
+<ul>
+<li><p>限流的策略有很多</p>
+<ul>
+<li><p>当单位时间内请求次数过多，丢弃多余的请求，</p>
+</li>
+<li><p>考虑分区限流。仅拒绝来自产生大量请求的服务的请求</p>
+<ul>
+<li>例如商品服务和订单服务都需要访问促销服务</li>
+<li>商品服务由于代码问题发起了大量请求</li>
+<li>促销服务则只限制来自商品服务的请求，来自订单服务的请求则正常响应</li>
+</ul>
 <p>​</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>classmates.pop()<br>   ‘Adam’<br>classmates<br>   [‘Michael’, ‘Jack’, ‘Bob’, ‘Tracy’]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>​        2.删除指定位置的元素，用pop(i)方法，其中i是索引位置：</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>classmates.pop(1)<br>   ‘Jack’<br>classmates<br>[‘Michael’, ‘Bob’, ‘Tracy’]<br>4.append追加，会将追加的东西作为一个整体追加，<br>5.extend是保持原有格式的扩展,将其变成单个字符添加。<br>6.count(关键字) 统计关键字的个数</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>​        3.insert(‘索引位置’,添加的值)</p>
-<p>四，Tuple</p>
-<ol>
-<li>有序列表叫元组：tuple。tuple和list非常类似，但是tuple一旦初始化就不能修改<ol start="2">
-<li>当然也有可变元组（即元组里面有列表）</li>
-</ol>
 </li>
-</ol>
-<p>五，If  while 循环</p>
-<ol>
-<li>range()，可以生成一个整数序列 例：range(5)生成的序列是从0开始小于5的整数：<br>2.Continue 可以跳过当前循环 例：</li>
-</ol>
-<p>六，dict(不可变元素)全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储<br>   1 .要删除一个key，用pop(key)方法，对应的value也会从dict中删除<br>​        &amp;&amp;<br>​    请务必注意，dict内部存放的顺序和key放入的顺序是没有关系的。<br>​           和list比较，dict有以下几个特点：<br>​                          1.查找和插入的速度极快，不会随着key的增加而变慢；<br>​                          2.需要占用大量的内存，内存浪费多。<br>​                 而list相反：<br>​                         1.查找和插入的时间随着元素的增加而增加；<br>​                         2.占用空间小，浪费内存很少。<br>​      所以，dict是用空间来换取时间的一种方法<br>七，Set(不可变元素)</p>
-<ol>
-<li><p>set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。<br>2.重复元素在set中自动被过滤： 例:</p>
-<p>3.通过add(key)方法可以添加元素到set中，可以重复添加，但不会有效果：<br>4.通过remove(key)方法可以删除元素：<br>5.replace()方法<br>①，对于不变对象来说，调用对象自身的任意方法，也不会改变该对象自身的内容。相反，这些方法会创建新的对象并返回，这样，就保证了不可变对象本身永远是不可变的。<br>②，所以这个方法就是不会在原有的对象上做手脚，只会赋到新的元素当中（同时也就保证了不可变对象本身永远是不可变的）</p>
+</ul>
 </li>
-</ol>
-<p>+++++1+++++<br>不可变对象。<br>这是因为dict根据key来计算value的存储位置，如果每次计算相同的key得出的结果不同，那dict内部就完全混乱了。这个通过key计算位置的算法称为哈希算法（Hash）。<br>要保证hash的正确性，作为key的对象就不能变。在Python中，字符串、整数等都是不可变的，因此，可以放心地作为key。而list是可变的，就不能作为key：<br>八，函数</p>
-<ol>
-<li><p>绝对值函数abs(参数)</p>
+</ul>
 </li>
-<li><p>max函数（可以接收任意多个参数，并返回最大的那个）</p>
+</ul>
 </li>
-<li><p>数据类型转换</p>
+</ul>
 </li>
-<li><p>函数名其实就是指向一个函数对象的引用，完全可以把函数名赋给一个变量，相当于给这个函数起了一个“别名”<br>a=abs //a现在是一个abs绝对值函数类型<br>a=(-1)</p>
+</ul>
 </li>
-</ol>
-<p>九，定义函数</p>
-<ol>
-<li>定义函数时，需要确定函数名和参数个数；<br>如果有必要，可以先对参数的数据类型做检查；</li>
-</ol>
-<p>函数体内部可以用return随时返回函数结果，函数执行完毕也没有return语句时，自动return None。<br>函数可以同时返回多个值，但其实就是一个tuple。</p>
-<p>2.import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数。</p>
-<p><font color="red">附上本人所有对于python基础的全部总结,纯干货呦！（包括爬虫等等）</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1AZZcoEP6F2PRBgg_qfWK5A </span><br><span class="line"></span><br><span class="line">提取码：yzyk</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="以上全是是自己总结"><a href="#以上全是是自己总结" class="headerlink" title="以上全是是自己总结"></a>以上全是是自己总结</h3><h3 id="新手博主—以上有很多空格的就是有图片（本人很努力的在学习MD语法）"><a href="#新手博主—以上有很多空格的就是有图片（本人很努力的在学习MD语法）" class="headerlink" title="新手博主—以上有很多空格的就是有图片（本人很努力的在学习MD语法）"></a>新手博主—以上有很多空格的就是有图片（本人很努力的在学习MD语法）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">参考：[廖雪峰][www.liaoxuefeng.com]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">附语：廖老师的网站是很适合小白的，本人有一点java的基础下学Python</span><br><span class="line">     要有方向的努力！！！《很重要》</span><br><span class="line">     </span><br><span class="line">     </span><br><span class="line">还是那句话基础不牢地动山摇！！！</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>微服务框架<ul>
+<li>引入组件以及功能<ul>
+<li>指标接口、链路跟踪注入、日志引流、服务注册发现、路由规则等组件以及熔断、限流等功能都需要在应用服务上添加一些对接代码</li>
+</ul>
+</li>
+<li>如果让每个应用服务自己实现是非常耗时耗力的<ul>
+<li>so<ul>
+<li>基于DRY的原则，便有了我们现在如火如荼的微服务框架</li>
+<li>将与各个组件对接的代码和另外一些公共代码抽离到框架中，所有的应用服务都统一使用这套框架进行开发</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>自定义的功能<ul>
+<li>代码级的链路跟踪<ul>
+<li>甚至可以将程序调用堆栈信息注入到链路跟踪，实现代码级别的链路跟踪。或者输出线程池、连接池的状态信息，实时监控服务底层状态</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>框架更新成本很高</li>
+<li>每次框架升级，都需要所有应用服务配合升级</li>
+<li>当然，一般会使用兼容方案，留出一段并行时间等待所有应用服务升级。但是如果应用服务非常多时，升级时间可能会非常漫长。并且有一些很稳定几乎不更新的应用服务，其负责人可能会拒绝升级</li>
+<li>so<ul>
+<li>因此，使用统一微服务框架需要完善的版本管理方法和开发管理规范</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>​</p>
+</li>
+</ul>
 
       
 
@@ -286,7 +419,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">微服务</a>
         		</li>
       		
 		</ul>
@@ -342,7 +475,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/16/%E4%BB%8E'0'%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -356,18 +489,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/10/%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B%E5%92%8C%E5%8E%9F%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          关于爬虫的流程和原理
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/02/%E5%B1%9E%E4%BA%8EPopDemo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">属于PopDemo的第一篇文章</div>
+    <a href="/2020/02/25/maven%E5%88%9D%E8%AF%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">maven初识</div>
       <i class="icon-circle-right"></i>
     </a>
   
