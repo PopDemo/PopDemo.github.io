@@ -6,23 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>谈谈猿的“自学” | PopDemo_Blog</title>
+  <title>MQ | PopDemo_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="谝闲传（陕西话：唠唠嗑）讲故事​      博主的自学开始也是在别人的引导下开始的，以前我的phone上全是潮流（拌合）的软件 &amp;emsp;&amp;emsp;&amp;emsp;给大家bb几个phone上的流量app ​             &amp;emsp;&amp;emsp;1.某音（简直真的是丧良心浪费时间啊,我没有自学开始时,我的抖音占据了我的百分之70的时间,真的可怕至极，大年30的晚上直接 delete） ​">
+  <meta name="description" content="1. MQ（消息队列） 介绍  消息队列中间件是分布式系统中的重要组件，主要解决以下应用背景中的三大模块，从而实现高性能，高可用，可伸缩和最终一致性的架构   应用背景  异步消息，应用解耦，流量削峰  异步消息  当我们的用户注册后写入数据库后，需要去发送短信和邮件去通知用户">
 <meta property="og:type" content="article">
-<meta property="og:title" content="谈谈猿的“自学”">
-<meta property="og:url" content="http://yoursite.com/2020/02/17/%E8%B0%88%E8%B0%88%E7%8C%BF%E7%9A%84%E2%80%9C%E8%87%AA%E5%AD%A6%E2%80%9D/index.html">
+<meta property="og:title" content="MQ">
+<meta property="og:url" content="http://yoursite.com/2020/03/24/MQ/index.html">
 <meta property="og:site_name" content="PopDemo_Blog">
-<meta property="og:description" content="谝闲传（陕西话：唠唠嗑）讲故事​      博主的自学开始也是在别人的引导下开始的，以前我的phone上全是潮流（拌合）的软件 &amp;emsp;&amp;emsp;&amp;emsp;给大家bb几个phone上的流量app ​             &amp;emsp;&amp;emsp;1.某音（简直真的是丧良心浪费时间啊,我没有自学开始时,我的抖音占据了我的百分之70的时间,真的可怕至极，大年30的晚上直接 delete） ​">
+<meta property="og:description" content="1. MQ（消息队列） 介绍  消息队列中间件是分布式系统中的重要组件，主要解决以下应用背景中的三大模块，从而实现高性能，高可用，可伸缩和最终一致性的架构   应用背景  异步消息，应用解耦，流量削峰  异步消息  当我们的用户注册后写入数据库后，需要去发送短信和邮件去通知用户">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDHhIIP5nvD6uK7aHVSPUdNgtovf2*1QWW5PSnQXpHr6f*YsX6JrSqvlVL4mnRK2d7mQxsb4cZwEHPxOks6nG75c!/b&bo=UgJQAgAAAAARBzI!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDKRpL3elWESxEHWDilWcgipQ9hq0tIzLARsZ3LON9UyADQQJhQpmLax*yu*O6zdTYnGp6NgXEItfb0vMBDhcVBY!/b&bo=wANWAwAAAAARF7Y!&rf=viewer_4">
-<meta property="article:published_time" content="2020-02-17T07:19:59.000Z">
-<meta property="article:modified_time" content="2020-02-18T09:47:12.054Z">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDIlclX3wY.YAFhM.nym8LEYtrsHLaoLmDCeZtLGtmbkO9zKIQUejoxwOnlDEPH2GTOX9XRJvdqC07I7pzFnZQnc!/b&bo=eQKTAAAAAAADF9o!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDIKy9dUf1eGe7mwnTKw6r*jS1Tv6CkopVaNZZCl.dvLF4IVpkaEr*DNK2dJsx7tD5F1qYebuwKNFxxQuMn2Voww!/b&bo=qALNAAAAAAADF1U!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDCLFYRtSW9L4VVOiAzhzCp44sR5NP1xuJPgLBEZmZEq7Ky3ooyuyUiihviCFk3*m*fi2V*d4ODIoenr5Tns7uLA!/b&bo=SgF0AAAAAAADFw0!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDDZ5tcx8H2Np2HtIIGSmzUPxc4Q73IU.f2IOEY5IlLWFQ7FXNnsTdmD4drCh4CsKEnW9ZH*geH9jixMUCLOXdog!/b&bo=mgHKAAAAAAADF2M!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDOUMTmV2ymFVj97j3Z3RX3shFJQAFfF*MnyyU93d.eFb*EFQzlCSlFtVG0cxGUP*EBlzlyks5YqEsrX6rcGQLXk!/b&bo=DQJ*AAAAAAADF0I!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDCkuu5*gWMOhW*tdme9vp.e9KRAZyqdQLO.bo36uggxzR4uaa6bMZ8eC0.NhPGHeQ06Hr94g1U9qIRVw875DKTU!/b&bo=BwMkAQAAAAADJyM!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDE71p9X*hryXL3u5o7IYUJ32jBbrGN1y9NAVGBCd*hXAGnTp.TAPn16diwU.B.iv.xmb17*xRSYg0gfsRxk1vGg!/b&bo=7QIKAQAAAAADJ.Y!&rf=viewer_4">
+<meta property="article:published_time" content="2020-03-24T15:44:52.000Z">
+<meta property="article:modified_time" content="2020-03-24T15:59:23.742Z">
 <meta property="article:author" content="PopDemo">
-<meta property="article:tag" content="谝闲传">
+<meta property="article:tag" content="MQ">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDHhIIP5nvD6uK7aHVSPUdNgtovf2*1QWW5PSnQXpHr6f*YsX6JrSqvlVL4mnRK2d7mQxsb4cZwEHPxOks6nG75c!/b&bo=UgJQAgAAAAARBzI!&rf=viewer_4">
+<meta name="twitter:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDIlclX3wY.YAFhM.nym8LEYtrsHLaoLmDCeZtLGtmbkO9zKIQUejoxwOnlDEPH2GTOX9XRJvdqC07I7pzFnZQnc!/b&bo=eQKTAAAAAAADF9o!&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="PopDemo_Blog" type="application/atom+xml">
   
@@ -162,68 +167,148 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-谈谈猿的“自学”" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MQ" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      谈谈猿的“自学”
+      MQ
     </h1>
   
 
         
         
-<a href="/2020/02/17/%E8%B0%88%E8%B0%88%E7%8C%BF%E7%9A%84%E2%80%9C%E8%87%AA%E5%AD%A6%E2%80%9D/" class="archive-article-date">
-  	<time datetime="2020-02-17T07:19:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
+<a href="/2020/03/24/MQ/" class="archive-article-date">
+  	<time datetime="2020-03-24T15:44:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="谝闲传（陕西话：唠唠嗑）"><a href="#谝闲传（陕西话：唠唠嗑）" class="headerlink" title="谝闲传（陕西话：唠唠嗑）"></a>谝闲传（陕西话：唠唠嗑）</h2><h3 id="讲故事"><a href="#讲故事" class="headerlink" title="讲故事"></a>讲故事</h3><p>​      博主的自学开始也是在别人的引导下开始的，以前我的phone上全是潮流（拌合）的软件</p>
-<p>&emsp;&emsp;&emsp;给大家bb几个phone上的流量app</p>
-<p>​             &emsp;&emsp;1.某音（简直真的是丧良心浪费时间啊,我没有自学开始时,我的抖音占据了我的百分之70的时间,真的可怕至极，大年30的晚上直接 delete）</p>
-<p>​            &emsp;&emsp;2.刺激战场（那时候九点下晚自习的时候就开始了疯狂吃鸡，现在还没有卸，有时候累了犒劳自己！）</p>
-  <a id="more"></a>
+        <h5 id="1-MQ（消息队列）"><a href="#1-MQ（消息队列）" class="headerlink" title="1. MQ（消息队列）"></a>1. MQ（消息队列）</h5><ul>
+<li><p>介绍</p>
+<ul>
+<li>消息队列中间件是分布式系统中的重要组件，主要解决以下应用背景中的三大模块，从而实现高性能，高可用，可伸缩和最终一致性的架构</li>
+</ul>
+</li>
+<li><p>应用背景</p>
+<ul>
+<li><p>异步消息，应用解耦，流量削峰</p>
+<ul>
+<li><p>异步消息</p>
+<ul>
+<li><p>当我们的用户注册后写入数据库后，需要去发送短信和邮件去通知用户</p>
+<a id="more"></a>
 
-<p>​            &emsp;&emsp;3.斗鱼（有时候看看小团团的直播）</p>
-<p>​         &emsp;给大家说说开始自学的激发环境</p>
-<p>​             &emsp; 之后在一个(大晚上10点时候的时候)的晚上，我去窜宿舍了，看见班级第一的同学电脑上闪闪的几个字（廖雪峰的Python教程），因为本身技术上就跟人家有很大的差别，更别说人在还在后面偷偷的学习，那晚上之后疯狂安利….，因为本人是一个患有思想密集症的人，想了很多</p>
-<p>​              &emsp; &emsp; 然后就开始了………</p>
-<p>​            &emsp;好在我们舍里有一个同学有两台电脑，另一台还可以执行执行，那时候就开始了python旅程，注意博主也是一个计划性很高的人—-（计划）—&gt;预计的时每晚的下了晚自习开始学习，同时必须记笔记，每天逼自己学（以至于现在每天不学习都感觉对不起自己），效果感觉还不错，同时也记下来很多东西（本博的第二篇最下有资源！）</p>
-<p>​           &emsp; 临近10月1的假了，所以回到家就直接向自己的母上大人开始了….（安利电脑）……（注意本人平常也是这样的，不过这此更……），想要得到得心情，你们可以理解的，我的母亲大人最后下的通牒是：过年买！心想bb了，还得拿着他得烂电脑（是一个贼重，贼厚得不知道的什么本）敲（cao）</p>
-<p>​           &emsp;就这样慢慢的到了全中国女性喜欢的双十一，当时我买电脑的心情还是很渺小的，但是不小心在浏览小米商城的时候发现双11的前几天。疯狂降价,当时直接(在我的疯狂安利下)买了！人生中第一台笔记本得到了，嘻嘻</p>
-<h2 id="说正事了昂——-gt"><a href="#说正事了昂——-gt" class="headerlink" title="说正事了昂——&gt;"></a>说正事了昂——&gt;</h2><p>​            &emsp;电脑到的第一天晚上说实话我失眠了（本宝宝太难了），当时我觉得压力剧增，一下子都觉得压力很大，这电脑要不退了（没有信心），但是我的心里告诉我，我的自学程度要加强了（想完之后，当晚睡的香的一批）</p>
-<p>​        &emsp; 想了几个点</p>
-<p>​             &emsp; &emsp;1.继续自学python—-&gt;&gt;目的地是 python得scrapy框架</p>
-<p>​            &emsp; &emsp; 2.把每天下午的休息转给学习</p>
-<p>​            &emsp; &emsp; 3.收起（做事大大咧咧）的模样（为了更好适应）</p>
-<p>​          &emsp;&emsp;其他的……….（时间磨人啊）忘记了（反正当时的保证现在都实施的很完美）</p>
-<h3 id="自学（刚开始）的（需要时间update）缺点"><a href="#自学（刚开始）的（需要时间update）缺点" class="headerlink" title="自学（刚开始）的（需要时间update）缺点"></a>自学（刚开始）的（需要时间update）缺点</h3><h4 id="1-缺少独立思考"><a href="#1-缺少独立思考" class="headerlink" title="1. 缺少独立思考"></a>1. 缺少独立思考</h4><p>​           &emsp;学python时，因为前面有一个大牛的同学，有些时候就疯狂问,丝毫没有直接动脑子想问题的直觉！  之后再某一天里，被大牛嘲讽一波“你自己不会去看”，才去哼哧哼哧的自己去看！  </p>
-<h4 id="2-缺少笔记的插入（好记性不如烂word；眼过千遍，不如手敲一遍）"><a href="#2-缺少笔记的插入（好记性不如烂word；眼过千遍，不如手敲一遍）" class="headerlink" title="2.缺少笔记的插入（好记性不如烂word；眼过千遍，不如手敲一遍）"></a>2.缺少笔记的插入（好记性不如烂word；眼过千遍，不如手敲一遍）</h4><p>​           &emsp;在刚开始的时候，只知道用脑子过一遍就ok了==<font color="red">屁话</font></p>
-<h4 id="3-缺少python的思想（白话：用脑子）主义"><a href="#3-缺少python的思想（白话：用脑子）主义" class="headerlink" title="3.缺少python的思想（白话：用脑子）主义"></a>3.缺少python的思想（白话：用脑子）主义</h4><p>​           &emsp;在学python的时候，在廖老师的每一个教程下有一个题，每次的题，我都做不出来（非常的丢人的）我当时是在java的基础功底下学的python（感觉自己啥也不是）</p>
-<p>​           &emsp; 在不管是做项目还是题时，要注意<font color="red">多方位，多思维，多思考，少偷懒，少抄袭，少bb</font>的三思和三少，很重要哦</p>
-<h4 id="4-一个筋"><a href="#4-一个筋" class="headerlink" title="4.一个筋"></a>4.一个筋</h4><p>​            &emsp; 在学习python时，重头到尾我都只借鉴的廖老师的教程，别人的我是丝毫都没有看啊（我TM脑子让驴踢了）</p>
-<h4 id="5-多资源式"><a href="#5-多资源式" class="headerlink" title="5.多资源式"></a>5.多资源式</h4><p>​             &emsp; 因为刚开始学，不知道Github这个美丽又少女的网站，也不知bilibili这个宅男的网站，竟然对猿的帮助……太大了</p>
-<h4 id="6-非常重要的一点——–-gt-刨根问底-扪心自问（也是听于某up主）"><a href="#6-非常重要的一点——–-gt-刨根问底-扪心自问（也是听于某up主）" class="headerlink" title="6.非常重要的一点——–&gt;刨根问底==扪心自问（也是听于某up主）"></a>6.非常重要的一点——–&gt;刨根问底==扪心自问（也是听于某up主）</h4><p>​          &emsp;   在自学时，要问问自己问什么要学这个，要给自己的火箭里加注更多的燃料，学的越狠，飞的更高（大牛！）</p>
-<h4 id="7-不要自满哦（学生很重要的点）"><a href="#7-不要自满哦（学生很重要的点）" class="headerlink" title="7.不要自满哦（学生很重要的点）"></a>7.不要自满哦（学生很重要的点）</h4><p>​          &emsp; 在自学期间，本博主因为本身自学爬虫很爽很牛逼，然后每天就很……就不说了</p>
-<h4 id="8-注意反复阅读哦"><a href="#8-注意反复阅读哦" class="headerlink" title="8.注意反复阅读哦"></a>8.注意反复阅读哦</h4><p>​         &emsp; 到现在博主的记忆力可以说是鱼了吧，要多看哦  </p>
-<h4 id="9-多练多敲（重中之重！！！）"><a href="#9-多练多敲（重中之重！！！）" class="headerlink" title="9.多练多敲（重中之重！！！）"></a>9.多练多敲（重中之重！！！）</h4><p>​          &emsp;博主在这里立一个flag：（最近在weibo发了篇，我的flag写成了flog，丢人至极啊）</p>
-<p>​                   &emsp; &emsp; 把之前的python反过来看一遍，拿起来敲一边，不能白学啊</p>
-<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>​      &emsp;其实说实话，最最重要的莫过于<font color="red">有方向的自学，才是根本之本啊</font>；毕竟不要努力了半天还是还给了别人莫过于浪费时间</p>
-<p>​     &emsp;过了这阵子的疫情，去了学校我也要开始我的自学了,最近在学vue，之后也会给大家出一个vue的笔记</p>
-<p>​    &emsp;还有在自学过程中不能藏着掖着，要大胆的拿出来，毕竟每个人有每个人的想法都可以拿过来借鉴（博主在python的之后藏着掖着，不给别人说，现在想想“我咋是这么个丢人玩意”）</p>
-<p>​                <img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDHhIIP5nvD6uK7aHVSPUdNgtovf2*1QWW5PSnQXpHr6f*YsX6JrSqvlVL4mnRK2d7mQxsb4cZwEHPxOks6nG75c!/b&bo=UgJQAgAAAAARBzI!&rf=viewer_4" alt="img"></p>
-<h2 id="切入"><a href="#切入" class="headerlink" title="切入"></a>切入</h2><p>​       &emsp; &emsp;世界那莫大，个人是个人的，每个人的学习方法方式都不一样，就来说：我和我们班那个大牛来说：他的学习方法是什么—–&gt;它去攻克一个项目他是用到什么去学习什么，而我——&gt;是这个语言或这个框架我会从头到尾的学习      </p>
-<h1 id="插："><a href="#插：" class="headerlink" title="插："></a>插：</h1><p>​      &emsp; &emsp;&emsp;&emsp;&emsp;送给大家一个jpg（很重要哦！！！）</p>
-<p>​      <img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDKRpL3elWESxEHWDilWcgipQ9hq0tIzLARsZ3LON9UyADQQJhQpmLax*yu*O6zdTYnGp6NgXEItfb0vMBDhcVBY!/b&bo=wANWAwAAAAARF7Y!&rf=viewer_4" alt="img"></p>
-<p>​       </p>
-<p>​       </p>
-<p>​     </p>
-<p>​             </p>
+<ul>
+<li>传统处理<ul>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDIlclX3wY.YAFhM.nym8LEYtrsHLaoLmDCeZtLGtmbkO9zKIQUejoxwOnlDEPH2GTOX9XRJvdqC07I7pzFnZQnc!/b&bo=eQKTAAAAAAADF9o!&rf=viewer_4" alt="img"></li>
+<li>解释<ul>
+<li>我们需要一级一级来对其进行功能的实现非常耗时</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>加入MQ后<ul>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDIKy9dUf1eGe7mwnTKw6r*jS1Tv6CkopVaNZZCl.dvLF4IVpkaEr*DNK2dJsx7tD5F1qYebuwKNFxxQuMn2Voww!/b&bo=qALNAAAAAAADF1U!&rf=viewer_4" alt="img"></li>
+<li>解释<ul>
+<li>通过写入我们消息队列，让邮件和信息模块直接去异步读取消息队列中的祖册信息</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>应用解耦</p>
+<ul>
+<li>用户下单后，订单系统需要通知库存系统<ul>
+<li>传统处理<ul>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDCLFYRtSW9L4VVOiAzhzCp44sR5NP1xuJPgLBEZmZEq7Ky3ooyuyUiihviCFk3*m*fi2V*d4ODIoenr5Tns7uLA!/b&bo=SgF0AAAAAAADFw0!&rf=viewer_4" alt="img"></li>
+<li>解释<ul>
+<li>它通过我们的订单系统<code>直接</code>去访问我们的库存系统，假如我们的库存系统宕机了，那会造成很大的影响</li>
+<li>缺点 ： 订单系统和库存系统紧密的耦合在一起</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>加入MQ<ul>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDDZ5tcx8H2Np2HtIIGSmzUPxc4Q73IU.f2IOEY5IlLWFQ7FXNnsTdmD4drCh4CsKEnW9ZH*geH9jixMUCLOXdog!/b&bo=mgHKAAAAAAADF2M!&rf=viewer_4" alt="img"></li>
+<li>解释<ul>
+<li>实现应用解耦，加入了中间人——–最大的引入了消息中间件</li>
+<li>订单系统可以通过写入消息队列，从而库存系统会去订阅也就是获取消息队列中的下单信息来对库存进行操作</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>流量削峰</p>
+<ul>
+<li>例如秒杀，秒杀他会有大量的信息涌入进来，导致流量暴增，应用直接挂掉<ul>
+<li>用前端去<code>加入消息队列</code><ul>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDOUMTmV2ymFVj97j3Z3RX3shFJQAFfF*MnyyU93d.eFb*EFQzlCSlFtVG0cxGUP*EBlzlyks5YqEsrX6rcGQLXk!/b&bo=DQJ*AAAAAAADF0I!&rf=viewer_4" alt="img"></li>
+<li>解释<ul>
+<li>在通过秒杀的案例来说，我们例如去抢购10个N95口罩</li>
+<li>我们可以直接在消息队列中设置请求的队列的数量（=10），假如消息队列长度超过最大数量，则直接抛弃用户请求或直接跳到错误页面</li>
+<li>之后秒杀业务处理再去获取用户的下单信息来进行完成</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>消息队列的两种模式</p>
+<ul>
+<li><p>点对点模式（一对一模式，消费者主动拉去数据，消息收到后消息清除）</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDCkuu5*gWMOhW*tdme9vp.e9KRAZyqdQLO.bo36uggxzR4uaa6bMZ8eC0.NhPGHeQ06Hr94g1U9qIRVw875DKTU!/b&bo=BwMkAQAAAAADJyM!&rf=viewer_4" alt="img"></p>
+</li>
+<li><p>发布-订阅模式（一对多，消费者消费数据之后不会清楚消息）</p>
+<ul>
+<li>消息生产者（发布）消息发布到topic主题中，同时有多个消息消费者（订阅）消费该消息，和点对点的方式不同，发布到topic的消息会被所有的订阅者消费<ul>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDE71p9X*hryXL3u5o7IYUJ32jBbrGN1y9NAVGBCd*hXAGnTp.TAPn16diwU.B.iv.xmb17*xRSYg0gfsRxk1vGg!/b&bo=7QIKAQAAAAADJ.Y!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>谈谈对于两种模式的优缺点</p>
+<ul>
+<li>点对点<ul>
+<li>缺点<ul>
+<li>我们需要消费者 <code>主动的去</code> 队列中去找到消息，so  我们的消费者需要 <code>不停的去</code> 队列中去查看消息</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>发布-订阅模式<ul>
+<li>缺点<ul>
+<li>我们的主题队列会<code>主动的去</code>把消息推到消费者里，但是我们的消费者可能会 <code>被动接收到</code> 更大的流量，造成宕机，或者 消费者的处理量很大，又会造成资源浪费</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>消息队列可以传给多个消费者来进行使用</li>
+<li>消费者的消费速度，可以自己去设置使用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -237,7 +322,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">谝闲传</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MQ</a>
         		</li>
       		
 		</ul>
@@ -293,7 +378,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/17/%E8%B0%88%E8%B0%88%E7%8C%BF%E7%9A%84%E2%80%9C%E8%87%AA%E5%AD%A6%E2%80%9D/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/24/MQ/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -307,18 +392,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/25/maven%E5%88%9D%E8%AF%86/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          maven初识
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/12/linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">linux终端常用的命令</div>
+    <a href="/2020/03/16/%E4%BB%8E'0'%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">从&#39;0&#39;到微服务框架</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -482,7 +558,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">MQ</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,11 +566,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">谝闲传</a>
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">
