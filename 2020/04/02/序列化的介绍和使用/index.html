@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | PopDemo_Blog</title>
+  <title>序列化介绍和使用 | PopDemo_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Ŀǰ����ѧ��һö��Ϊ�����Ժ��������ͣ�Ŀ�꣺ȫջ">
-<meta property="og:type" content="website">
-<meta property="og:title" content="PopDemo_Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="序列化 什么是序列化 就是把java对象储存在某一地方（硬盘,网络），也就是将对象的内容流化 两大类 序列化 将数据分解成字节流，一边存储在文件中或在网络上传输   反序列化 打开字节流并重构对象，对象序列化不仅要将基本数据类型转换成字节表示,有时还要恢复数据，         常用的序列化  java中自带的序列化技术  IOException** Serializable接口，则所有的序列化将">
+<meta property="og:type" content="article">
+<meta property="og:title" content="序列化介绍和使用">
+<meta property="og:url" content="http://yoursite.com/2020/04/02/%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="PopDemo_Blog">
-<meta property="og:description" content="Ŀǰ����ѧ��һö��Ϊ�����Ժ��������ͣ�Ŀ�꣺ȫջ">
+<meta property="og:description" content="序列化 什么是序列化 就是把java对象储存在某一地方（硬盘,网络），也就是将对象的内容流化 两大类 序列化 将数据分解成字节流，一边存储在文件中或在网络上传输   反序列化 打开字节流并重构对象，对象序列化不仅要将基本数据类型转换成字节表示,有时还要恢复数据，         常用的序列化  java中自带的序列化技术  IOException** Serializable接口，则所有的序列化将">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-02T14:38:15.000Z">
+<meta property="article:modified_time" content="2020-04-02T14:39:49.939Z">
 <meta property="article:author" content="PopDemo">
+<meta property="article:tag" content="序列化">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="PopDemo_Blog" type="application/atom+xml">
@@ -156,37 +159,198 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-序列化的介绍和使用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/02/%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-04-02T14:38:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/02/%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/">序列化介绍和使用</a>
+    <h1 class="article-title" itemprop="name">
+      序列化介绍和使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+<a href="/2020/04/02/%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-04-02T14:38:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h1><ul>
+<li>什么是序列化<ul>
+<li>就是把java对象储存在某一地方（硬盘,网络），也就是将对象的内容<code>流化</code></li>
+<li>两大类<ul>
+<li>序列化<ul>
+<li>将数据分解成字节流，一边存储在文件中或在网络上传输</li>
+</ul>
+</li>
+<li>反序列化<ul>
+<li>打开字节流并重构对象，对象序列化不仅要将基本数据类型转换成字节表示,有时还要恢复数据，</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>常用的序列化</p>
+<ul>
+<li><p>java中自带的序列化技术</p>
+<ul>
+<li>IOException**<ul>
+<li><strong>Serializable接口，则所有的序列化将会自动进行</strong></li>
+</ul>
+</li>
+<li><strong>Externalizable</strong><ul>
+<li><strong>则没有任何东西可以自动序列化，</strong>需要在writeExternal方法中进行手工指定所要序列化的变量</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h6 id="json"><a href="#json" class="headerlink" title="json"></a>json</h6><ul>
+<li><h6 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h6><ul>
+<li><h6 id="是一种轻量级的数据交换格式-采用与编程语言无关的文本格式"><a href="#是一种轻量级的数据交换格式-采用与编程语言无关的文本格式" class="headerlink" title="是一种轻量级的数据交换格式,采用与编程语言无关的文本格式"></a>是一种轻量级的数据交换格式,采用与编程语言无关的文本格式</h6></li>
+</ul>
+</li>
+<li><p>优缺点</p>
+<ul>
+<li>优点<ul>
+<li>数据格式比较简单，易于读写</li>
+<li>序列化后数据较小，可扩展性好，兼容性好</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>数据的描述性不乐观</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h6 id="Fastjson"><a href="#Fastjson" class="headerlink" title="Fastjson"></a>Fastjson</h6><ul>
+<li><h6 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h6><ul>
+<li><h6 id="FastJson是一个java语言编写的高性能功能完善的JSON库"><a href="#FastJson是一个java语言编写的高性能功能完善的JSON库" class="headerlink" title="FastJson是一个java语言编写的高性能功能完善的JSON库"></a>FastJson是一个java语言编写的高性能功能完善的JSON库</h6></li>
+</ul>
+</li>
+<li><p>优缺点</p>
+<ul>
+<li>优点<ul>
+<li>接口简单易用</li>
+<li>目前java语言中最快的json库</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>过于注重快，而偏离了“标准”及功能性</li>
+<li>代码质量不高，文档不全</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h6 id="Protobuf"><a href="#Protobuf" class="headerlink" title="Protobuf"></a><strong>Protobuf</strong></h6><ul>
+<li><h6 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h6><ul>
+<li><h6 id="protobuf是可以进行跨语言的序列化机制"><a href="#protobuf是可以进行跨语言的序列化机制" class="headerlink" title="protobuf是可以进行跨语言的序列化机制"></a>protobuf是可以进行跨语言的序列化机制</h6></li>
+</ul>
+</li>
+<li><p>优缺点</p>
+<ul>
+<li>优点<ul>
+<li>性能强</li>
+<li>结构化数据存储格式（XML JSON等）</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>需要依赖于工具生成代码</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>如何进行序列化</p>
+<ul>
+<li><p>让类实现Serializable接口</p>
+<ul>
+<li>该接口是一个标志性的接口,标注该类可被序列</li>
+</ul>
+</li>
+<li><p>然后<code>使用输出流来构造一个对象输出流并通过writeObject(Object)方法</code>就可以将实现对象写出</p>
+</li>
+<li><p>如果需要反序列化,则可以用一个输入流建立对象输入流,然后通过readObject方法从流中读取对象</p>
+</li>
+<li><p>代码</p>
+<ul>
+<li><p>序列化User到本地</p>
+<ul>
+<li><blockquote>
+<pre><code class="java"><span class="meta">@Test</span>
+<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Test01</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>{
+    <span class="comment">//获取文件的输出流inputStream</span>
+    <span class="comment">//将这个对象输出</span>
+    User user1 = <span class="keyword">new</span> User(<span class="number">1</span>,<span class="string">"PopDemo"</span>,<span class="string">"1234567"</span>);
+    User user2 = <span class="keyword">new</span> User(<span class="number">2</span>,<span class="string">"yangfan"</span>,<span class="string">"1234567"</span>);
+    User user3 = <span class="keyword">new</span> User(<span class="number">3</span>,<span class="string">"iu"</span>,<span class="string">"1234567"</span>);
+    <span class="comment">/**</span>
+<span class="comment">     * 与这个文件的输出流进行绑定操作</span>
+<span class="comment">     * 我们利用这个对象的输出流，然后进行写一个操作</span>
+<span class="comment">     * 就可以实现对象的序列化的过程</span>
+<span class="comment">     * 建立管道</span>
+<span class="comment">     * 进行输出实体</span>
+<span class="comment">     */</span>
+    ObjectOutputStream oos = <span class="keyword">new</span> ObjectOutputStream(<span class="keyword">new</span>     FileOutputStream(<span class="string">"F:/pop.txt"</span>));
+    <span class="comment">//讲类输出到管道内</span>
+    oos.writeObject(user1);
+    oos.writeObject(user2);
+    oos.writeObject(user3);
+    oos.flush();
+    oos.close();
+    System.out.println(<span class="string">"数据已保存到本地，感谢您的使用"</span>);
+}
+&lt;!--￼<span class="number">0</span>--&gt;</code></pre>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>transient 和 static 为什么不会被序列化的原因</p>
+<ul>
+<li><p>transient   static不会被序列化(IOException)</p>
+<ul>
+<li><p>序列化保存的是对象的状态，静态变量数以类的状态，因此序列化并不保存静态变量。</p>
+<p>这里的不能序列化的意思，是序列化信息中不包含这个静态成员域</p>
+</li>
+<li><p>但是还有一种情况会被序列化</p>
+<ul>
+<li>One<ul>
+<li>当我们实现<strong>Externalizable接口，则没有任何东西可以自动序列化，</strong>需要在writeExternal方法中进行手工指定所要序列化的变量，这与是否被transient修饰无关</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -198,282 +362,143 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/02/%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/03/24/MQ/" class="archive-article-date">
-  	<time datetime="2020-03-24T15:44:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/24/MQ/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MQ</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/24/MQ/">MQ</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MQ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+
+  
+
+  
+
+
+
+    <div id="comment"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'Dear, please comment!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+    }
+    });
+</script>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/03/16/%E4%BB%8E'0'%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/" class="archive-article-date">
-  	<time datetime="2020-03-16T09:06:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/16/%E4%BB%8E'0'%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/">从&#39;0&#39;到微服务框架</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">微服务</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/25/maven%E5%88%9D%E8%AF%86/" class="archive-article-date">
-  	<time datetime="2020-02-25T10:53:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/25/maven%E5%88%9D%E8%AF%86/">maven初识</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/12/linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2020-02-12T12:30:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/12/linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/">linux终端常用的命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/10/%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B%E5%92%8C%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-02-10T01:06:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/10/%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B%E5%92%8C%E5%8E%9F%E7%90%86/">关于爬虫的流程和原理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-02-06T12:48:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/">Python的基础语法的总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/02/%E5%B1%9E%E4%BA%8EPopDemo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-02-02T05:31:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/02/%E5%B1%9E%E4%BA%8EPopDemo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">属于PopDemo的第一篇文章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
 
           </div>
         </div>
@@ -497,8 +522,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
