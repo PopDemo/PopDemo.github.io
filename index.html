@@ -158,6 +158,136 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-关于java的垃圾处理机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/10/%E5%85%B3%E4%BA%8Ejava%E7%9A%84%E5%9E%83%E5%9C%BE%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/">关于java的垃圾处理机制</a>
+    </h1>
+  
+
+        
+        
+<a href="/2020/04/10/%E5%85%B3%E4%BA%8Ejava%E7%9A%84%E5%9E%83%E5%9C%BE%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/" class="archive-article-date">
+  	<time datetime="2020-04-10T01:26:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>首先说java的垃圾回收机制</p>
+<ul>
+<li>简述垃圾回收机制<ul>
+<li>在java中程序员不用去显示性的去释放一个对象的内存，而是由虚拟机去自行执行</li>
+<li>在jvm中，垃圾回收是低优先级的，所以不会在一般的情况下去运行，而实在jvm空闲的时候或者是堆空间满了的时候，才会触发执行<ul>
+<li>可以通过可达性的方式来对没有引用的对象进行一个垃圾处理的行为</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>java的垃圾回收机制是自动化的，可控性很差，有时会出现内存溢出的情况</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="再说说—java是如何确定哪些对象应该进行回收"><a href="#再说说—java是如何确定哪些对象应该进行回收" class="headerlink" title="再说说—java是如何确定哪些对象应该进行回收"></a>再说说—java是如何确定哪些对象应该进行回收</h4>
+        
+          <a class="article-more-a" href="/2020/04/10/%E5%85%B3%E4%BA%8Ejava%E7%9A%84%E5%9E%83%E5%9C%BE%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">java垃圾处理机制</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/10/%E5%85%B3%E4%BA%8Ejava%E7%9A%84%E5%9E%83%E5%9C%BE%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+    <div id="comment"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'Dear, please comment!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+    }
+    });
+</script>
+    
+
+  
     <article id="post-序列化的介绍和使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -198,151 +328,9 @@
 </ul>
 <ul>
 <li><p>常用的序列化</p>
-<ul>
-<li><p>java中自带的序列化技术</p>
-<ul>
-<li>IOException**<ul>
-<li><strong>Serializable接口，则所有的序列化将会自动进行</strong></li>
-</ul>
-</li>
-<li><strong>Externalizable</strong><ul>
-<li><strong>则没有任何东西可以自动序列化，</strong>需要在writeExternal方法中进行手工指定所要序列化的变量</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h6 id="json"><a href="#json" class="headerlink" title="json"></a>json</h6><ul>
-<li><h6 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h6><ul>
-<li><h6 id="是一种轻量级的数据交换格式-采用与编程语言无关的文本格式"><a href="#是一种轻量级的数据交换格式-采用与编程语言无关的文本格式" class="headerlink" title="是一种轻量级的数据交换格式,采用与编程语言无关的文本格式"></a>是一种轻量级的数据交换格式,采用与编程语言无关的文本格式</h6></li>
-</ul>
-</li>
-<li><p>优缺点</p>
-<ul>
-<li>优点<ul>
-<li>数据格式比较简单，易于读写</li>
-<li>序列化后数据较小，可扩展性好，兼容性好</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>数据的描述性不乐观</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h6 id="Fastjson"><a href="#Fastjson" class="headerlink" title="Fastjson"></a>Fastjson</h6><ul>
-<li><h6 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h6><ul>
-<li><h6 id="FastJson是一个java语言编写的高性能功能完善的JSON库"><a href="#FastJson是一个java语言编写的高性能功能完善的JSON库" class="headerlink" title="FastJson是一个java语言编写的高性能功能完善的JSON库"></a>FastJson是一个java语言编写的高性能功能完善的JSON库</h6></li>
-</ul>
-</li>
-<li><p>优缺点</p>
-<ul>
-<li>优点<ul>
-<li>接口简单易用</li>
-<li>目前java语言中最快的json库</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>过于注重快，而偏离了“标准”及功能性</li>
-<li>代码质量不高，文档不全</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h6 id="Protobuf"><a href="#Protobuf" class="headerlink" title="Protobuf"></a><strong>Protobuf</strong></h6><ul>
-<li><h6 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h6><ul>
-<li><h6 id="protobuf是可以进行跨语言的序列化机制"><a href="#protobuf是可以进行跨语言的序列化机制" class="headerlink" title="protobuf是可以进行跨语言的序列化机制"></a>protobuf是可以进行跨语言的序列化机制</h6></li>
-</ul>
-</li>
-<li><p>优缺点</p>
-<ul>
-<li>优点<ul>
-<li>性能强</li>
-<li>结构化数据存储格式（XML JSON等）</li>
-</ul>
-</li>
-<li>缺点<ul>
-<li>需要依赖于工具生成代码</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>如何进行序列化</p>
-<ul>
-<li><p>让类实现Serializable接口</p>
-<ul>
-<li>该接口是一个标志性的接口,标注该类可被序列</li>
-</ul>
-</li>
-<li><p>然后<code>使用输出流来构造一个对象输出流并通过writeObject(Object)方法</code>就可以将实现对象写出</p>
-</li>
-<li><p>如果需要反序列化,则可以用一个输入流建立对象输入流,然后通过readObject方法从流中读取对象</p>
-</li>
-<li><p>代码</p>
-<ul>
-<li><p>序列化User到本地</p>
-<ul>
-<li><blockquote>
-<pre><code class="java"><span class="meta">@Test</span>
-<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Test01</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>{
-    <span class="comment">//获取文件的输出流inputStream</span>
-    <span class="comment">//将这个对象输出</span>
-    User user1 = <span class="keyword">new</span> User(<span class="number">1</span>,<span class="string">"PopDemo"</span>,<span class="string">"1234567"</span>);
-    User user2 = <span class="keyword">new</span> User(<span class="number">2</span>,<span class="string">"yangfan"</span>,<span class="string">"1234567"</span>);
-    User user3 = <span class="keyword">new</span> User(<span class="number">3</span>,<span class="string">"iu"</span>,<span class="string">"1234567"</span>);
-    <span class="comment">/**</span>
-<span class="comment">     * 与这个文件的输出流进行绑定操作</span>
-<span class="comment">     * 我们利用这个对象的输出流，然后进行写一个操作</span>
-<span class="comment">     * 就可以实现对象的序列化的过程</span>
-<span class="comment">     * 建立管道</span>
-<span class="comment">     * 进行输出实体</span>
-<span class="comment">     */</span>
-    ObjectOutputStream oos = <span class="keyword">new</span> ObjectOutputStream(<span class="keyword">new</span>     FileOutputStream(<span class="string">"F:/pop.txt"</span>));
-    <span class="comment">//讲类输出到管道内</span>
-    oos.writeObject(user1);
-    oos.writeObject(user2);
-    oos.writeObject(user3);
-    oos.flush();
-    oos.close();
-    System.out.println(<span class="string">"数据已保存到本地，感谢您的使用"</span>);
-}
-&lt;!--￼<span class="number">0</span>--&gt;</code></pre>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>transient 和 static 为什么不会被序列化的原因</p>
-<ul>
-<li><p>transient   static不会被序列化(IOException)</p>
-<ul>
-<li><p>序列化保存的是对象的状态，静态变量数以类的状态，因此序列化并不保存静态变量。</p>
-<p>这里的不能序列化的意思，是序列化信息中不包含这个静态成员域</p>
-</li>
-<li><p>但是还有一种情况会被序列化</p>
-<ul>
-<li>One<ul>
-<li>当我们实现<strong>Externalizable接口，则没有任何东西可以自动序列化，</strong>需要在writeExternal方法中进行手工指定所要序列化的变量，这与是否被transient修饰无关</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2020/04/02/%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/#more">more >></a>
+        
       
 
       
@@ -1370,15 +1358,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">java垃圾处理机制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微服务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">

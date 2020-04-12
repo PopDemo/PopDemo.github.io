@@ -6,17 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/2 | PopDemo_Blog</title>
+  <title>关于java的垃圾处理机制 | PopDemo_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Ŀǰ����ѧ��һö��Ϊ�����Ժ��������ͣ�Ŀ�꣺ȫջ">
-<meta property="og:type" content="website">
-<meta property="og:title" content="PopDemo_Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2020/02/index.html">
+  <meta name="description" content="首先说java的垃圾回收机制  简述垃圾回收机制 在java中程序员不用去显示性的去释放一个对象的内存，而是由虚拟机去自行执行 在jvm中，垃圾回收是低优先级的，所以不会在一般的情况下去运行，而实在jvm空闲的时候或者是堆空间满了的时候，才会触发执行 可以通过可达性的方式来对没有引用的对象进行一个垃圾处理的行为     缺点 java的垃圾回收机制是自动化的，可控性很差，有时会出现内存溢出的情况">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于java的垃圾处理机制">
+<meta property="og:url" content="http://yoursite.com/2020/04/10/%E5%85%B3%E4%BA%8Ejava%E7%9A%84%E5%9E%83%E5%9C%BE%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/index.html">
 <meta property="og:site_name" content="PopDemo_Blog">
-<meta property="og:description" content="Ŀǰ����ѧ��һö��Ϊ�����Ժ��������ͣ�Ŀ�꣺ȫջ">
+<meta property="og:description" content="首先说java的垃圾回收机制  简述垃圾回收机制 在java中程序员不用去显示性的去释放一个对象的内存，而是由虚拟机去自行执行 在jvm中，垃圾回收是低优先级的，所以不会在一般的情况下去运行，而实在jvm空闲的时候或者是堆空间满了的时候，才会触发执行 可以通过可达性的方式来对没有引用的对象进行一个垃圾处理的行为     缺点 java的垃圾回收机制是自动化的，可控性很差，有时会出现内存溢出的情况">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT2nUqqO1O39NPNVhOPQJAAdZjB2JV0Q8Ql1Z1B4LxcH6HJT4u69ppLgVkuELt.JJIA!!/b&bo=WQKSAQAAAAADB.o!&rf=viewer_4">
+<meta property="og:image" content="https://img-blog.csdn.net/20180714164932971?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTA2Nzk5MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="article:published_time" content="2020-04-10T01:26:44.000Z">
+<meta property="article:modified_time" content="2020-04-12T15:23:01.121Z">
 <meta property="article:author" content="PopDemo">
+<meta property="article:tag" content="java垃圾处理机制">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT2nUqqO1O39NPNVhOPQJAAdZjB2JV0Q8Ql1Z1B4LxcH6HJT4u69ppLgVkuELt.JJIA!!/b&bo=WQKSAQAAAAADB.o!&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="PopDemo_Blog" type="application/atom+xml">
   
@@ -156,207 +162,323 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-关于java的垃圾处理机制" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于java的垃圾处理机制
+    </h1>
+  
+
+        
+        
+<a href="/2020/04/10/%E5%85%B3%E4%BA%8Ejava%E7%9A%84%E5%9E%83%E5%9C%BE%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/" class="archive-article-date">
+  	<time datetime="2020-04-10T01:26:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>首先说java的垃圾回收机制</p>
+<ul>
+<li>简述垃圾回收机制<ul>
+<li>在java中程序员不用去显示性的去释放一个对象的内存，而是由虚拟机去自行执行</li>
+<li>在jvm中，垃圾回收是低优先级的，所以不会在一般的情况下去运行，而实在jvm空闲的时候或者是堆空间满了的时候，才会触发执行<ul>
+<li>可以通过可达性的方式来对没有引用的对象进行一个垃圾处理的行为</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>java的垃圾回收机制是自动化的，可控性很差，有时会出现内存溢出的情况</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="再说说—java是如何确定哪些对象应该进行回收"><a href="#再说说—java是如何确定哪些对象应该进行回收" class="headerlink" title="再说说—java是如何确定哪些对象应该进行回收"></a>再说说—java是如何确定哪些对象应该进行回收</h4><a id="more"></a>
+
+<ul>
+<li><p>对象被回收的两个<code>经典</code>算法</p>
+<ul>
+<li><p>引用计数法</p>
+<ul>
+<li><p>就是用来记录对象被 <code>引用</code> 的次数</p>
+</li>
+<li><h6 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h6><ul>
+<li>给对象添加上一个引用计数器，</li>
+<li>当该对象被调用时，我们的计数器+1，</li>
+<li>当该引用失效时，我们的计数器就会-1，当</li>
+<li>某一个对象的引用计数器为0时，那就说明表示这个对象没有人进行引用，那就意味着它是一个失效的垃圾对象，就会被GC处理进行回收！</li>
+</ul>
+</li>
+<li><h5 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a><strong>缺点</strong></h5><ul>
+<li>这种简单的算法jvm并没有进行使用，原因是她不能解决对象间相互调用引用的问题<ul>
+<li>假设有A和B两个对象之间<code>互相引用</code>，也就是说A对象中的一个属性是B，B中的一个属性时A,这种情况下由于他们的<code>相互引用</code>，从而是垃圾回收机制<strong>无法识别</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>可达性分析算法</p>
+<ul>
+<li>通过判断对象的引用链是否<strong>可达</strong>来进行决定对象是否进行回收</li>
+<li>实现方式<ul>
+<li>从离散数学中的图论引入的，我们会把程序看作一张图</li>
+<li>通过一系列的名为GC Roots的对象作为起始点</li>
+<li>从这些节点开始向下搜索，搜索所走过的路径成为<strong><code>引用链</code></strong></li>
+<li>当我们一个对象到我们的GCRoot没有任何的引用链进行连接时（就是从GCRoot到这个对象不可达）</li>
+<li>则证明此对象时不可用的，就会进行GC处理</li>
+</ul>
+</li>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT2nUqqO1O39NPNVhOPQJAAdZjB2JV0Q8Ql1Z1B4LxcH6HJT4u69ppLgVkuELt.JJIA!!/b&bo=WQKSAQAAAAADB.o!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h4 id="再说说-什么时候进行回收"><a href="#再说说-什么时候进行回收" class="headerlink" title="再说说- 什么时候进行回收"></a>再说说- 什么时候进行回收</h4><ul>
+<li>在CPU空闲的时候进行回收</li>
+<li>在堆空间储存满了之后</li>
+<li>主动调用System.Gc()后尝试进行回收</li>
+</ul>
+</li>
+<li><h4 id="如何回收—回收工作原理"><a href="#如何回收—回收工作原理" class="headerlink" title="如何回收—回收工作原理"></a>如何回收—回收工作原理</h4><ul>
+<li>也就是说的垃圾收集的<code>算法</code></li>
+<li>标记–清除算法（最基础的一种算法）<ul>
+<li>实现步骤<ul>
+<li>一个步骤也就是标记出需要回收的对象</li>
+<li>标记完成后就进行同一个回收掉那些带有标记的对象</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>空间问题<ul>
+<li>当我们标记后进行清除后，会产生大量不连续的内存碎片</li>
+</ul>
+</li>
+<li>再分配<ul>
+<li>当程序在以后的运行过程中需要分配较大对象时无法找到足够的连续内存而造成内存空间浪费</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>复制算法<ul>
+<li>实现步骤<ul>
+<li>我们通过将可用的内存按容量划分为大小相等的两块，每次只去使用其中的一块</li>
+<li>但我们这一块的内存用完了，就将还存活着的对象复制到另一块的内存上面</li>
+<li>然后再将已使用过的内存空间一次清理掉，这样使得每次都是对其中的一块进行内存回收GC</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>在对其对象存活率较高时就要执行较多的复制操作时，我们的效率就会降低</li>
+<li>更关键的是—–浪费了一半的空间</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>标记整理算法<ul>
+<li>实现步骤<ul>
+<li>对其需要回收的对象进行标记</li>
+<li>然后对其标记的回收对象进行回收</li>
+</ul>
+</li>
+<li>与<strong>标记清楚算法</strong>进行比较<ul>
+<li>标记清楚算法仅对不存活的对象进行处理，剩余存活对象不做任何处理，造成内存碎片</li>
+<li>而标记整理算法，不仅对不存活的对象进行处理，同时还对剩余的存活对象进行整理，重新整理</li>
+<li>so<ul>
+<li>不会产生内存碎片</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>分代收集算法<ul>
+<li>理解<ul>
+<li>这种算法是一种比较智能的算法，也就是现在jvm使用最多的一种算法</li>
+</ul>
+</li>
+<li>算法策略<ul>
+<li>他会在具体的场景自动选择以上三种算法进行垃圾对象回收</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>垃圾回收的各个场景和相应回收策略</p>
+<ul>
+<li>​<ul>
+<li><img src="https://img-blog.csdn.net/20180714164932971?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTA2Nzk5MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/25/maven%E5%88%9D%E8%AF%86/" class="archive-article-date">
-  	<time datetime="2020-02-25T10:53:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/25/maven%E5%88%9D%E8%AF%86/">maven初识</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">maven</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">java垃圾处理机制</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/10/%E5%85%B3%E4%BA%8Ejava%E7%9A%84%E5%9E%83%E5%9C%BE%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/12/linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2020-02-12T12:30:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-12</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/02/%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">序列化介绍和使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/12/linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/">linux终端常用的命令</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+
+  
+
+  
+
+
+
+    <div id="comment"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '4ucH680pEndCO2tqU6NLs6HY-gzGzoHsz',
+    appKey: '2JvbNN5JaD9sXyBsJj6H9spx',
+    placeholder: 'Dear, please comment!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+    }
+    });
+</script>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/10/%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B%E5%92%8C%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-02-10T01:06:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/10/%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B%E5%92%8C%E5%8E%9F%E7%90%86/">关于爬虫的流程和原理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-02-06T12:48:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/">Python的基础语法的总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/02/02/%E5%B1%9E%E4%BA%8EPopDemo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-02-02T05:31:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/02/%E5%B1%9E%E4%BA%8EPopDemo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">属于PopDemo的第一篇文章</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
 
           </div>
         </div>
@@ -380,8 +502,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
