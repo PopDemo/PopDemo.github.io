@@ -179,7 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="ActiveMQ"><a href="#ActiveMQ" class="headerlink" title="ActiveMQ"></a>ActiveMQ</h1><h5 id="1-JMS消息模型"><a href="#1-JMS消息模型" class="headerlink" title="1. JMS消息模型"></a>1. JMS消息模型</h5><ul>
+        <h5 id="1-JMS消息模型"><a href="#1-JMS消息模型" class="headerlink" title="1. JMS消息模型"></a>1. JMS消息模型</h5><ul>
 <li><ul>
 <li><p>即</p>
 <ul>
@@ -194,82 +194,9 @@
 <li>接收者（Receiver）</li>
 </ul>
 <p>解释:</p>
-<p>​    每个消息都被发送到一个特定的队列，接收者从队列中获取消息，队列保留着消息，直到它们被消费或超时</p>
-</li>
-<li><p>P2P的特点</p>
-<ul>
-<li>每个消息只能有一个消费者（即一旦被消费，消息就不在队列中）</li>
-<li>发送者和接收者之间在时间上没有依赖性，也就是说当发送者发送了消息之后，不管接收者有没有正在运行，他都不会影响到消息被发送到队列中（在时间上没有依赖性）</li>
-<li>接收者在成功接受消息之后需向队列应答成功</li>
-</ul>
-</li>
-<li><p>so</p>
-<ul>
-<li>如果希望发送的每一个消息都会被成功处理的话，那么需要P2P模式</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h6 id="发布订阅模式-Publish-Subscribe-Pub-Sub"><a href="#发布订阅模式-Publish-Subscribe-Pub-Sub" class="headerlink" title="发布订阅模式   Publish/Subscribe(Pub/Sub)"></a>发布订阅模式   Publish/Subscribe(Pub/Sub)</h6><ul>
-<li>包含三个角色<ul>
-<li>主题（Topic） </li>
-<li>发布者（Publisher）  </li>
-<li>订阅者（Subscricber）</li>
-</ul>
-</li>
-<li>特点<ul>
-<li>每个消息可以有多个消费者</li>
-<li>发布者和订阅者之间有时间上的依赖性。针对每个主题（Topic）的订阅者，它必须创建一个订阅之后，才能消费发布者的消息</li>
-<li>为了消费消息，订阅者必须保持运行的状态</li>
-</ul>
-</li>
-<li>so<ul>
-<li>为了缓和这样严格的时间相关性，JMS允许订阅者创建一个可持久化的订阅。这样,即使订阅者没有被激活（运行），它也能接受到发布和的消息</li>
-<li>如果希望发送的消息可以被多个消费者处理的话，那么可以采用Pub和Sub模型</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="2-ActiveMQ-Topic-消息失败重发"><a href="#2-ActiveMQ-Topic-消息失败重发" class="headerlink" title="2. ActiveMQ Topic 消息失败重发"></a>2. ActiveMQ Topic 消息失败重发</h5><ul>
-<li>即是我们的消息的接收方，没有成功的消费消息，我们要去要去重发这个消息，让我们的消费者可以消费到这个消息，这个机制就是我们的重发</li>
-</ul>
-<ul>
-<li><h6 id="JMS消息确认机制"><a href="#JMS消息确认机制" class="headerlink" title="JMS消息确认机制"></a>JMS消息确认机制</h6><ul>
-<li>在Session中需要定义几个常量<ul>
-<li>AUTO_ACKNOWLEDGE = 1       //自动确认</li>
-<li>CLIENT_ACKNOWLEDGE = 2     //客户端手动确认</li>
-<li>DUPS_OK_ACKNOWLEDGE = 3 //自动批量确认</li>
-<li>SESSION_TRANSACTED = 0       //事务提交并确认</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>代码确认</p>
-<ul>
-<li><a href="F:\IDEA_PreServer\Y_PoP\MQ">地址</a></li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>ActiveMQ Topic 消息持久化订阅</li>
-</ol>
-<ul>
-<li><p>持久化到文件（默认）</p>
-<ul>
-<li><p>在Conf文件夹中,查看是否有</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">persistenceAdapter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">kahaDB</span> <span class="attr">directory</span>=<span class="string">"$&#123;activemq.data&#125;/kahadb"</span>/&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">persistenceAdapter</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>​</p>
-</li>
-</ul>
-</li>
-<li><p>持久化到数据库（mysql数据库）</p>
-</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2020/04/16/ActiveMQ/#more">more >></a>
+        
       
 
       
@@ -1554,7 +1481,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1562,11 +1493,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">maven</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
