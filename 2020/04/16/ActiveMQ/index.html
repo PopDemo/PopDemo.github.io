@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Python的基础语法的总结 | PopDemo_Blog</title>
+  <title>ActiveMQ | PopDemo_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Python基础语法（认真学习的猿,才能的到最后的果实!）&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;一，格式化常用的占位符1.“%”运算符就是用来格式化字符串的2.如果字符串中要表示%的时候必须打%%3.格式化字符串的方法是使用字符串的format()方法，它会用传入的参数依次替换符串内的占位符{0}、{1}……4.在字符串内部，%s表示用字符串替换，%d表示用整数替换，有几个%?占位符，后面就跟几个变量或者值">
+  <meta name="description" content="ActiveMQ1. JMS消息模型  即  java Message service    P2P(Point to Point) 点对点模式 P2P模式包含三个角色      消息队列（Queue） 发送者（Sender） 接收者（Receiver）  解释: ​    每个消息都被发送到一个特定的队列，接收者从队列中获取消息，队列保留着消息，直到它们被消费或超时  P2P的特点  每个消息只">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python的基础语法的总结">
-<meta property="og:url" content="http://yoursite.com/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:title" content="ActiveMQ">
+<meta property="og:url" content="http://yoursite.com/2020/04/16/ActiveMQ/index.html">
 <meta property="og:site_name" content="PopDemo_Blog">
-<meta property="og:description" content="Python基础语法（认真学习的猿,才能的到最后的果实!）&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;一，格式化常用的占位符1.“%”运算符就是用来格式化字符串的2.如果字符串中要表示%的时候必须打%%3.格式化字符串的方法是使用字符串的format()方法，它会用传入的参数依次替换符串内的占位符{0}、{1}……4.在字符串内部，%s表示用字符串替换，%d表示用整数替换，有几个%?占位符，后面就跟几个变量或者值">
+<meta property="og:description" content="ActiveMQ1. JMS消息模型  即  java Message service    P2P(Point to Point) 点对点模式 P2P模式包含三个角色      消息队列（Queue） 发送者（Sender） 接收者（Receiver）  解释: ​    每个消息都被发送到一个特定的队列，接收者从队列中获取消息，队列保留着消息，直到它们被消费或超时  P2P的特点  每个消息只">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-06T12:48:27.000Z">
-<meta property="article:modified_time" content="2020-02-16T05:41:09.171Z">
+<meta property="article:published_time" content="2020-04-16T12:30:27.000Z">
+<meta property="article:modified_time" content="2020-04-16T12:31:03.472Z">
 <meta property="article:author" content="PopDemo">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="MQ">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="PopDemo_Blog" type="application/atom+xml">
@@ -159,120 +159,117 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Python的基础语法的总结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ActiveMQ" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Python的基础语法的总结
+      ActiveMQ
     </h1>
   
 
         
         
-<a href="/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-02-06T12:48:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-06</time>
+<a href="/2020/04/16/ActiveMQ/" class="archive-article-date">
+  	<time datetime="2020-04-16T12:30:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Python基础语法（认真学习的猿-才能的到最后的果实-）"><a href="#Python基础语法（认真学习的猿-才能的到最后的果实-）" class="headerlink" title="Python基础语法（认真学习的猿,才能的到最后的果实!）"></a>Python基础语法（认真学习的猿,才能的到最后的果实!）</h2><p>==============<br>一，格式化常用的占位符<br>1.“%”运算符就是用来格式化字符串的<br>2.如果字符串中要表示%的时候必须打%%<br>3.格式化字符串的方法是使用字符串的format()方法，它会用传入的参数依次替换符串内的占位符{0}、{1}……<br>4.在字符串内部，%s表示用字符串替换，%d表示用整数替换，有几个%?占位符，后面就跟几个变量或者值，顺序要对应好。如果只有一个%?，括号可以省略。<br>5.死知识</p>
-<hr>
-<p>  占位符——————– 替换内容</p>
-<a id="more"></a>
-<hr>
-<pre><code>%d                         整数</code></pre><hr>
-<pre><code>%f                        浮点数</code></pre><hr>
-<pre><code>%s                        字符串</code></pre><hr>
-<pre><code>%x                     十六进制整数</code></pre><p>二，格式</p>
-<p>   1.在多个格化式字符中要把参数放进print（）括号里面</p>
-<ol start="2">
-<li>%.1f   这个意思就是去小数点后一位</li>
-<li>在控制台输入的东西要是int类型的时候必须要（s1=int(input(“请输入你要加入的数字”))</li>
-</ol>
-<p>三，list集合 </p>
-<p>​     0.可以把元素插入到指定的位置，比如索引号为1的位置：</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>classmates.insert(1, ‘Jack’)<br>classmates<br>[‘Michael’, ‘Jack’, ‘Bob’, ‘Tracy’, ‘Adam’] </p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>​    1.要删除list末尾的元素，用pop()方法</p>
-<p>​</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>classmates.pop()<br>   ‘Adam’<br>classmates<br>   [‘Michael’, ‘Jack’, ‘Bob’, ‘Tracy’]</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>​        2.删除指定位置的元素，用pop(i)方法，其中i是索引位置：</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>classmates.pop(1)<br>   ‘Jack’<br>classmates<br>[‘Michael’, ‘Bob’, ‘Tracy’]<br>4.append追加，会将追加的东西作为一个整体追加，<br>5.extend是保持原有格式的扩展,将其变成单个字符添加。<br>6.count(关键字) 统计关键字的个数</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>​        3.insert(‘索引位置’,添加的值)</p>
-<p>四，Tuple</p>
+        <h1 id="ActiveMQ"><a href="#ActiveMQ" class="headerlink" title="ActiveMQ"></a>ActiveMQ</h1><h5 id="1-JMS消息模型"><a href="#1-JMS消息模型" class="headerlink" title="1. JMS消息模型"></a>1. JMS消息模型</h5><ul>
+<li><ul>
+<li><p>即</p>
+<ul>
+<li>java Message service </li>
+</ul>
+</li>
+<li><h6 id="P2P-Point-to-Point-点对点模式"><a href="#P2P-Point-to-Point-点对点模式" class="headerlink" title="P2P(Point to Point) 点对点模式"></a>P2P(Point to Point) 点对点模式</h6><ul>
+<li><p>P2P模式包含三个角色    </p>
+<ul>
+<li>消息队列（Queue）</li>
+<li>发送者（Sender）</li>
+<li>接收者（Receiver）</li>
+</ul>
+<p>解释:</p>
+<p>​    每个消息都被发送到一个特定的队列，接收者从队列中获取消息，队列保留着消息，直到它们被消费或超时</p>
+</li>
+<li><p>P2P的特点</p>
+<ul>
+<li>每个消息只能有一个消费者（即一旦被消费，消息就不在队列中）</li>
+<li>发送者和接收者之间在时间上没有依赖性，也就是说当发送者发送了消息之后，不管接收者有没有正在运行，他都不会影响到消息被发送到队列中（在时间上没有依赖性）</li>
+<li>接收者在成功接受消息之后需向队列应答成功</li>
+</ul>
+</li>
+<li><p>so</p>
+<ul>
+<li>如果希望发送的每一个消息都会被成功处理的话，那么需要P2P模式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h6 id="发布订阅模式-Publish-Subscribe-Pub-Sub"><a href="#发布订阅模式-Publish-Subscribe-Pub-Sub" class="headerlink" title="发布订阅模式   Publish/Subscribe(Pub/Sub)"></a>发布订阅模式   Publish/Subscribe(Pub/Sub)</h6><ul>
+<li>包含三个角色<ul>
+<li>主题（Topic） </li>
+<li>发布者（Publisher）  </li>
+<li>订阅者（Subscricber）</li>
+</ul>
+</li>
+<li>特点<ul>
+<li>每个消息可以有多个消费者</li>
+<li>发布者和订阅者之间有时间上的依赖性。针对每个主题（Topic）的订阅者，它必须创建一个订阅之后，才能消费发布者的消息</li>
+<li>为了消费消息，订阅者必须保持运行的状态</li>
+</ul>
+</li>
+<li>so<ul>
+<li>为了缓和这样严格的时间相关性，JMS允许订阅者创建一个可持久化的订阅。这样,即使订阅者没有被激活（运行），它也能接受到发布和的消息</li>
+<li>如果希望发送的消息可以被多个消费者处理的话，那么可以采用Pub和Sub模型</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-ActiveMQ-Topic-消息失败重发"><a href="#2-ActiveMQ-Topic-消息失败重发" class="headerlink" title="2. ActiveMQ Topic 消息失败重发"></a>2. ActiveMQ Topic 消息失败重发</h5><ul>
+<li>即是我们的消息的接收方，没有成功的消费消息，我们要去要去重发这个消息，让我们的消费者可以消费到这个消息，这个机制就是我们的重发</li>
+</ul>
+<ul>
+<li><h6 id="JMS消息确认机制"><a href="#JMS消息确认机制" class="headerlink" title="JMS消息确认机制"></a>JMS消息确认机制</h6><ul>
+<li>在Session中需要定义几个常量<ul>
+<li>AUTO_ACKNOWLEDGE = 1       //自动确认</li>
+<li>CLIENT_ACKNOWLEDGE = 2     //客户端手动确认</li>
+<li>DUPS_OK_ACKNOWLEDGE = 3 //自动批量确认</li>
+<li>SESSION_TRANSACTED = 0       //事务提交并确认</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>代码确认</p>
+<ul>
+<li><a href="F:\IDEA_PreServer\Y_PoP\MQ">地址</a></li>
+</ul>
+</li>
+</ul>
 <ol>
-<li>有序列表叫元组：tuple。tuple和list非常类似，但是tuple一旦初始化就不能修改<ol start="2">
-<li>当然也有可变元组（即元组里面有列表）</li>
+<li>ActiveMQ Topic 消息持久化订阅</li>
 </ol>
+<ul>
+<li><p>持久化到文件（默认）</p>
+<ul>
+<li><p>在Conf文件夹中,查看是否有</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">persistenceAdapter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">kahaDB</span> <span class="attr">directory</span>=<span class="string">"$&#123;activemq.data&#125;/kahadb"</span>/&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">persistenceAdapter</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<p>五，If  while 循环</p>
-<ol>
-<li>range()，可以生成一个整数序列 例：range(5)生成的序列是从0开始小于5的整数：<br>2.Continue 可以跳过当前循环 例：</li>
-</ol>
-<p>六，dict(不可变元素)全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储<br>   1 .要删除一个key，用pop(key)方法，对应的value也会从dict中删除<br>​        &amp;&amp;<br>​    请务必注意，dict内部存放的顺序和key放入的顺序是没有关系的。<br>​           和list比较，dict有以下几个特点：<br>​                          1.查找和插入的速度极快，不会随着key的增加而变慢；<br>​                          2.需要占用大量的内存，内存浪费多。<br>​                 而list相反：<br>​                         1.查找和插入的时间随着元素的增加而增加；<br>​                         2.占用空间小，浪费内存很少。<br>​      所以，dict是用空间来换取时间的一种方法<br>七，Set(不可变元素)</p>
-<ol>
-<li><p>set和dict类似，也是一组key的集合，但不存储value。由于key不能重复，所以，在set中，没有重复的key。<br>2.重复元素在set中自动被过滤： 例:</p>
-<p>3.通过add(key)方法可以添加元素到set中，可以重复添加，但不会有效果：<br>4.通过remove(key)方法可以删除元素：<br>5.replace()方法<br>①，对于不变对象来说，调用对象自身的任意方法，也不会改变该对象自身的内容。相反，这些方法会创建新的对象并返回，这样，就保证了不可变对象本身永远是不可变的。<br>②，所以这个方法就是不会在原有的对象上做手脚，只会赋到新的元素当中（同时也就保证了不可变对象本身永远是不可变的）</p>
+<li><p>​</p>
 </li>
-</ol>
-<p>+++++1+++++<br>不可变对象。<br>这是因为dict根据key来计算value的存储位置，如果每次计算相同的key得出的结果不同，那dict内部就完全混乱了。这个通过key计算位置的算法称为哈希算法（Hash）。<br>要保证hash的正确性，作为key的对象就不能变。在Python中，字符串、整数等都是不可变的，因此，可以放心地作为key。而list是可变的，就不能作为key：<br>八，函数</p>
-<ol>
-<li><p>绝对值函数abs(参数)</p>
+</ul>
 </li>
-<li><p>max函数（可以接收任意多个参数，并返回最大的那个）</p>
+<li><p>持久化到数据库（mysql数据库）</p>
 </li>
-<li><p>数据类型转换</p>
-</li>
-<li><p>函数名其实就是指向一个函数对象的引用，完全可以把函数名赋给一个变量，相当于给这个函数起了一个“别名”<br>a=abs //a现在是一个abs绝对值函数类型<br>a=(-1)</p>
-</li>
-</ol>
-<p>九，定义函数</p>
-<ol>
-<li>定义函数时，需要确定函数名和参数个数；<br>如果有必要，可以先对参数的数据类型做检查；</li>
-</ol>
-<p>函数体内部可以用return随时返回函数结果，函数执行完毕也没有return语句时，自动return None。<br>函数可以同时返回多个值，但其实就是一个tuple。</p>
-<p>2.import math语句表示导入math包，并允许后续代码引用math包里的sin、cos等函数。</p>
-<p><font color="red">附上本人所有对于python基础的全部总结,纯干货呦！（包括爬虫等等）</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1AZZcoEP6F2PRBgg_qfWK5A </span><br><span class="line"></span><br><span class="line">提取码：yzyk</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="以上全是是自己总结"><a href="#以上全是是自己总结" class="headerlink" title="以上全是是自己总结"></a>以上全是是自己总结</h3><h3 id="新手博主—以上有很多空格的就是有图片（本人很努力的在学习MD语法）"><a href="#新手博主—以上有很多空格的就是有图片（本人很努力的在学习MD语法）" class="headerlink" title="新手博主—以上有很多空格的就是有图片（本人很努力的在学习MD语法）"></a>新手博主—以上有很多空格的就是有图片（本人很努力的在学习MD语法）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">参考：[廖雪峰][www.liaoxuefeng.com]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">附语：廖老师的网站是很适合小白的，本人有一点java的基础下学Python</span><br><span class="line">     要有方向的努力！！！《很重要》</span><br><span class="line">     </span><br><span class="line">     </span><br><span class="line">还是那句话基础不牢地动山摇！！！</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
+</ul>
 
       
 
@@ -286,7 +283,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MQ</a>
         		</li>
       		
 		</ul>
@@ -342,7 +339,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/06/Python%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%9A%84%E6%80%BB%E7%BB%93/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/16/ActiveMQ/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -356,18 +353,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/10/%E5%85%B3%E4%BA%8E%E7%88%AC%E8%99%AB%E7%9A%84%E6%B5%81%E7%A8%8B%E5%92%8C%E5%8E%9F%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          关于爬虫的流程和原理
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/02/%E5%B1%9E%E4%BA%8EPopDemo%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">属于PopDemo的第一篇文章</div>
+    <a href="/2020/04/10/%E5%85%B3%E4%BA%8Ejava%E7%9A%84%E5%9E%83%E5%9C%BE%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于java的垃圾处理机制</div>
       <i class="icon-circle-right"></i>
     </a>
   
