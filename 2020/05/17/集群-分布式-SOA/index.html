@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>集群/分布式/SOA - PopDemo_Blog</title><meta description="集群 维基百科 计算机集群简称集群是一种计算机系统，它通过一组松散集成的计算机软件和&amp;#x2F;或硬件连接起来高度紧密地协作完成计算工作。在某种意义上，他们可以被看作是一台计算机。集群系统中的单个计算机通常称为节点，通常通过局域网连接，但也有其它的可能连接方式。集群计算机通常用来改进单个计算机的计算速度和&amp;#x2F;或可靠性。一般情况下集群计算机比单个计算机，比如工作站或超级计算机性能价格比要高得多   特点 通过多"><meta property="og:type" content="blog"><meta property="og:title" content="集群/分布式/SOA"><meta property="og:url" content="http://yoursite.com/2020/05/17/%E9%9B%86%E7%BE%A4-%E5%88%86%E5%B8%83%E5%BC%8F-SOA/"><meta property="og:site_name" content="PopDemo_Blog"><meta property="og:description" content="集群 维基百科 计算机集群简称集群是一种计算机系统，它通过一组松散集成的计算机软件和&amp;#x2F;或硬件连接起来高度紧密地协作完成计算工作。在某种意义上，他们可以被看作是一台计算机。集群系统中的单个计算机通常称为节点，通常通过局域网连接，但也有其它的可能连接方式。集群计算机通常用来改进单个计算机的计算速度和&amp;#x2F;或可靠性。一般情况下集群计算机比单个计算机，比如工作站或超级计算机性能价格比要高得多   特点 通过多"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT98OSlMB27*TORZupiFgn4ii68qFCy49LfhZW0gsv72RIW8FsPrbwE7QdGLCr.bpFw!!/b&amp;bo=7QQMAgAAAAARB9c!&amp;rf=viewer_4"><meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDAvS6iADSGgCqV2lmDe39684fOGWkkkc9RjRCYTO8FZuxsIttAWqXa8v9ThD50YpbkET8EBKDpsPZ9lXjjl44LM!/b&amp;bo=AAUWAgAAAAARFzE!&amp;rf=viewer_4"><meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDFMmXu.26mlImu8KqjwVdXFAJlY.ElIz6Ct5p5OKCkU8ZTzCr6F3cmM63fOK9uIn1NekULolE62YRkUchD9EsC8!/b&amp;bo=AAUMAgAAAAARFys!&amp;rf=viewer_4"><meta property="article:published_time" content="2020-05-17T09:06:55.000Z"><meta property="article:modified_time" content="2020-05-17T09:09:19.993Z"><meta property="article:author" content="PopDemo"><meta property="article:tag" content="微服务"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT98OSlMB27*TORZupiFgn4ii68qFCy49LfhZW0gsv72RIW8FsPrbwE7QdGLCr.bpFw!!/b&amp;bo=7QQMAgAAAAARB9c!&amp;rf=viewer_4"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://popdemo.github.io"},"headline":"PopDemo_Blog","image":[],"datePublished":"2020-05-17T09:06:55.000Z","dateModified":"2020-05-17T09:09:19.993Z","author":{"@type":"Person","name":"PopDemo"},"description":"集群 维基百科 计算机集群简称集群是一种计算机系统，它通过一组松散集成的计算机软件和&#x2F;或硬件连接起来高度紧密地协作完成计算工作。在某种意义上，他们可以被看作是一台计算机。集群系统中的单个计算机通常称为节点，通常通过局域网连接，但也有其它的可能连接方式。集群计算机通常用来改进单个计算机的计算速度和&#x2F;或可靠性。一般情况下集群计算机比单个计算机，比如工作站或超级计算机性能价格比要高得多   特点 通过多"}</script><link rel="canonical" href="http://yoursite.com/2020/05/17/%E9%9B%86%E7%BE%A4-%E5%88%86%E5%B8%83%E5%BC%8F-SOA/"><link rel="icon" href="/assets/imgs/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/assets/imgs/001.jpg" alt="PopDemo_Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/popdemo"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2020-05-17T09:06:55.000Z" title="2020-05-17T09:06:55.000Z">2020-05-17</time><span class="level-item"><a class="link-muted" href="/categories/%E6%A1%86%E6%9E%B6/">框架</a></span><span class="level-item">13 分钟 读完 (大约 1992 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">集群/分布式/SOA</h1><div class="content"><h2 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h2><ol>
+<li><h4 id="维基百科"><a href="#维基百科" class="headerlink" title="维基百科"></a>维基百科</h4><blockquote>
+<p>计算机集群简称集群是一种<strong>计算机系统</strong>，它通过一组松散集成的计算机软件和/或硬件连接起来高度紧密地协作完成计算工作。在某种意义上，他们可以被看作是一台计算机。集群系统中的单个计算机通常称为节点，通常通过局域网连接，但也有其它的可能连接方式。集群计算机通常用来改进单个计算机的计算速度和/或可靠性。一般情况下集群计算机比单个计算机，比如工作站或超级计算机性能价格比要高得多</p>
+</blockquote>
+</li>
+<li><h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ol>
+<li><p>通过多台计算机来完成一个工作，达到更高的效率</p>
+<a id="more"></a>
+</li>
+<li><p>两机或多机内容和工作过程完全相同，如果一台死机还有另外的可以进行使用</p>
+</li>
+</ol>
+</li>
+<li><h4 id="白话文讲解集群（对于服务而言）"><a href="#白话文讲解集群（对于服务而言）" class="headerlink" title="白话文讲解集群（对于服务而言）"></a>白话文讲解集群（对于服务而言）</h4><ol>
+<li><h5 id="我们开发的秒杀项目里面有几种一摸一样，功能也一致的服务，这种情况叫做集群"><a href="#我们开发的秒杀项目里面有几种一摸一样，功能也一致的服务，这种情况叫做集群" class="headerlink" title="我们开发的秒杀项目里面有几种一摸一样，功能也一致的服务，这种情况叫做集群"></a>我们开发的秒杀项目里面有几种一摸一样，功能也一致的服务，这种情况叫做<strong>集群</strong></h5></li>
+<li><h5 id="背景讲解"><a href="#背景讲解" class="headerlink" title="背景讲解"></a>背景讲解</h5><ol>
+<li><p>当我们的项目在一台差不读配置的服务器上部署，当有一天我们的服务器开始大批量的进入访问量，这个时候我们服务器的访问变得很慢，所以PopDemo准备再买一台服务器，将我们的项目部署到上面</p>
+</li>
+<li><h5 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h5><ol>
+<li>两个服务器同时去运行同一个项目</li>
+</ol>
+</li>
+<li><h5 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h5><ol>
+<li>我们之前是一个服务器而言，所有的压力都在这一个服务器上面，当我们两个服务器同时去部署这个项目时，分担了访问的压力，大大的提高了我们的质量</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><strong>集群</strong>：同一个业务，部署在多个服务器上(不同的服务器运行同样的代码，干同一件事)</p>
+</li>
+</ol>
+<h2 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h2><ol>
+<li><h4 id="维基百科-1"><a href="#维基百科-1" class="headerlink" title="维基百科"></a>维基百科</h4><blockquote>
+<p>分布式系统是一组计算机，通过网络相互连接传递消息与通信后并协调它们的行为而形成的系统。<strong>组件之间彼此进行交互以实现一个共同的目标</strong></p>
+</blockquote>
+</li>
+<li><h4 id="白话文理解"><a href="#白话文理解" class="headerlink" title="白话文理解"></a>白话文理解</h4><ol>
+<li>当我们的项目部署到两个服务器上后我们发现，访问量还是不停的<strong>上增</strong>，我们的访问也愈来愈慢，不可能再去买一个服务器跑吧，我们开始追究项目问题，当我们发现所有的服务都在一个tomcat上运行着，这么高的访问量怎么弄的快</li>
+<li>解决<ol>
+<li>我们可以直观的发现有些服务的访问量是很低的，所以我们打算抽象独立出来<ol>
+<li>将我们访问量高的服务拿配置好一点的服务器来跑</li>
+<li>访问量低的我们拿差的服务器装着</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>好处<ol>
+<li>资源合理利用<ol>
+<li>我们访问量高的使用高配置的服务器吗</li>
+</ol>
+</li>
+<li>耦合度降低<ol>
+<li>我们将我们模块抽象独立出来，大大的降低了我们代码之间的耦合度</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><h4 id="特点-2"><a href="#特点-2" class="headerlink" title="特点"></a>特点</h4><ol>
+<li>我们将项目的服务进行模块化的拆分，之后再组合起来就是个完美的系统</li>
+</ol>
+</li>
+<li><h4 id="好处-1"><a href="#好处-1" class="headerlink" title="好处"></a>好处</h4><ol>
+<li>拆分成模块化后，我们模块之间的各做各的事情，便于扩展</li>
+<li><strong>高吞吐量</strong><ol>
+<li>某个任务需要一个机器运行10个小时，将该任务用10台机器的分布式跑(将这个任务拆分成10个小任务)，可能2个小时就跑完了</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>分布式：一个项目拆分为多个子模块，部署在不同的服务器上（不同的服务器，运行不同的代码，干着同一件事）</p>
+<h4 id="集群-分布式"><a href="#集群-分布式" class="headerlink" title="集群/分布式"></a>集群/分布式</h4><h5 id="集群和分布式不冲突，还可以有分布式集群"><a href="#集群和分布式不冲突，还可以有分布式集群" class="headerlink" title="集群和分布式不冲突，还可以有分布式集群"></a>集群和分布式不冲突，还可以有分布式集群</h5><p>​        现在PopDemo的公司规模变大了，有5个小伙子写Java，4个小伙子写前端，2个小伙子做测试，1个小伙子做DBA。</p>
+<ul>
+<li>Java，前端，测试，DBA的关系看作是<strong>分布式的</strong></li>
+<li>5个Java看作是<strong>集群</strong>的(前端，测试同理)…</li>
+</ul>
+<h4 id="微服务-分布式-SOA"><a href="#微服务-分布式-SOA" class="headerlink" title="微服务/分布式/SOA"></a>微服务/分布式/SOA</h4><p>​    我认为分布式和微服务/SOA这三个是差不多的，只不过微服务更+1吧</p>
+<h1 id="2-CAP理论"><a href="#2-CAP理论" class="headerlink" title="2.CAP理论"></a>2.CAP理论</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>​    对于我们上面分布式概念我们已经很大的清楚，简答的理解也就是说，将一个业务拆分为多个子业务，一个业务部署在不同的的服务器上</p>
+<ul>
+<li>一个子业务称之为一个结点</li>
+</ul>
+<h3 id="首先我们看一下CAP是什么，他们分别代表着什么"><a href="#首先我们看一下CAP是什么，他们分别代表着什么" class="headerlink" title="首先我们看一下CAP是什么，他们分别代表着什么"></a>首先我们看一下CAP是什么，他们分别代表着什么</h3><ol>
+<li>C：数据一致性（consistency）<ol>
+<li>所有的数据都拥有数据的最新版</li>
+</ol>
+</li>
+<li>A：可用性（availability）<ol>
+<li>数据具有高可用性</li>
+</ol>
+</li>
+<li>P：分区容错性（partition-tolerance）<ol>
+<li>容忍网络出现分区，分区之间的网络不可达</li>
+</ol>
+</li>
+</ol>
+<p>下面是三个节点（它们是集群的）此时的三个节点可以相互通信</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT98OSlMB27*TORZupiFgn4ii68qFCy49LfhZW0gsv72RIW8FsPrbwE7QdGLCr.bpFw!!/b&bo=7QQMAgAAAAARB9c!&rf=viewer_4" alt="img"></p>
+<ul>
+<li>由于我们的系统是分布式的，节点之间的通讯交流是通过我们的网络来进行的。只要是分布式系统，那就有可能发生一种情况：因为一些故障，使得我们节点之间不能进行通信了，整个网络也就分成了几部分</li>
+<li>数据分散在不连通的区域中，这叫分区</li>
+</ul>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDAvS6iADSGgCqV2lmDe39684fOGWkkkc9RjRCYTO8FZuxsIttAWqXa8v9ThD50YpbkET8EBKDpsPZ9lXjjl44LM!/b&bo=AAUWAgAAAAARFzE!&rf=viewer_4" alt="img"></p>
+<ul>
+<li><p>出现网络分区后，ok，现在有一个用户请求注册，请求打了进来</p>
+<p><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDFMmXu.26mlImu8KqjwVdXFAJlY.ElIz6Ct5p5OKCkU8ZTzCr6F3cmM63fOK9uIn1NekULolE62YRkUchD9EsC8!/b&bo=AAUMAgAAAAARFys!&rf=viewer_4" alt="img"></p>
+</li>
+<li><p>这个时候我们有几个抉择</p>
+<ul>
+<li>如果允许当前用户进行注册，此时记录数据的是由节点一和节点二或者是节点二和节点三，因为节点一和节点三的之间是不通信的<ul>
+<li>这种情况也就是选择了可用性（availability），同时抛弃了数据一致性（consistency）</li>
+</ul>
+</li>
+<li>如果不允许当前用户进行注册（也就是要等节点一和节点三回复通信），节点一和节点三以但通信，我们也就直接的保证了数据的一致性<ul>
+<li>这种情况也就抛弃了可用性（availability），选择了数据一致性（consistency）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="ok，再梳理一下CAP理论"><a href="#ok，再梳理一下CAP理论" class="headerlink" title="ok，再梳理一下CAP理论"></a>ok，再梳理一下CAP理论</h3><p>一般来说我们的分布式系统，P：<strong>分区容错性</strong>（partition-tolerance）这个是必须的，是具有一定的客观性存在性</p>
+<p>CAP是无法完全兼顾的，在上面举的例子中，我们可以选择Ap，也可以选择CP，但是一定要注意，不是说选择了AP，C就直接完全抛弃了，不说选了CP，A也就完全抛弃了</p>
+<p>在CAP中C所表示的一致性是强一致的（每个节点的数据都是最新版的），其实一致性还有其它版本的</p>
+<ul>
+<li>弱一致性<ul>
+<li>对于强一致性而言，它不能保证总能得到最新的值</li>
+</ul>
+</li>
+<li>最终一致性<ul>
+<li>放宽对其时间的要求，在被调完成操作响应后的某个时间点，被调多个节点的数据最终达成一致</li>
+</ul>
+</li>
+</ul>
+<p>参考至：<a href="https://juejin.im/post/5b83466b6fb9a019b421cecc#heading-5">JAVA3y</a></p>
+</div><div class="article-tags size-small is-uppercase mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/05/09/%E6%B7%B1%E5%85%A5%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9F%A5%E6%8F%92%E5%88%A0%E7%9A%84%E6%B5%81%E7%A8%8B%E5%BA%95%E5%B1%82-%E5%B9%B6%E6%B7%B1%E5%85%A5%E6%93%8D%E4%BD%9C%E5%90%8E%E7%9A%84%E8%87%AA%E5%B9%B3%E8%A1%A1/"><span class="level-item">深入红黑树查插删的流程底层,并深入操作后的自平衡</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'http://yoursite.com/2020/05/17/%E9%9B%86%E7%BE%A4-%E5%88%86%E5%B8%83%E5%BC%8F-SOA/';
+            this.page.identifier = '2020/05/17/集群-分布式-SOA/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="is-rounded" src="/assets/imgs/001.jpg" alt="PopDemo"></figure><p class="title is-size-4 is-block line-height-inherit">PopDemo</p><p class="is-size-6 is-block">一个完美主义的互联网人</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>ShanXi,ShaanXi,ShangHai</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">15</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">7</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">9</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/popdemo" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/popdemo"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/PopDemo2"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://weibo.com/PopDemo" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Weibo</span></span><span class="level-right"><span class="level-item tag">weibo.com</span></span></a></li><li><a class="level is-mobile is-mobile" href="http://zksrw.top" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Zksrw</span></span><span class="level-right"><span class="level-item tag">zksrw.top</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/JAVA/"><span class="level-start"><span class="level-item">JAVA</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Linux/"><span class="level-start"><span class="level-item">Linux</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%97%A5%E5%BF%97/"><span class="level-start"><span class="level-item">日志</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE/"><span class="level-start"><span class="level-item">构建项目</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%A1%86%E6%9E%B6/"><span class="level-start"><span class="level-item">框架</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%BB%84%E4%BB%B6/"><span class="level-start"><span class="level-item">组件</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-17T09:06:55.000Z">2020-05-17</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/17/%E9%9B%86%E7%BE%A4-%E5%88%86%E5%B8%83%E5%BC%8F-SOA/">集群/分布式/SOA</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E6%A1%86%E6%9E%B6/">框架</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-08T16:27:40.000Z">2020-05-09</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/09/%E6%B7%B1%E5%85%A5%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9F%A5%E6%8F%92%E5%88%A0%E7%9A%84%E6%B5%81%E7%A8%8B%E5%BA%95%E5%B1%82-%E5%B9%B6%E6%B7%B1%E5%85%A5%E6%93%8D%E4%BD%9C%E5%90%8E%E7%9A%84%E8%87%AA%E5%B9%B3%E8%A1%A1/">深入红黑树查插删的流程底层,并深入操作后的自平衡</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/JAVA/">JAVA</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-07T11:55:44.000Z">2020-05-07</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/07/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91%E5%92%8C%E7%BA%A2%E9%BB%91%E6%A0%91/">数据结构之二叉查找树和红黑树</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/JAVA/">JAVA</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-05-06T14:35:56.000Z">2020-05-06</time></p><p class="title is-6"><a class="link-muted" href="/2020/05/06/LomBok/">LomBok</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%BB%84%E4%BB%B6/">组件</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-04-16T15:36:24.000Z">2020-04-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/04/16/Protobuf/">Protobuf</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%BB%84%E4%BB%B6/">组件</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/02/"><span class="level-start"><span class="level-item">二月 2020</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/LomBok/"><span class="tag">LomBok</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MQ/"><span class="tag">MQ</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java%E5%9E%83%E5%9C%BE%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/"><span class="tag">java垃圾处理机制</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linux/"><span class="tag">linux</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/maven/"><span class="tag">maven</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BA%8F%E5%88%97%E5%8C%96/"><span class="tag">序列化</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"><span class="tag">微服务</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"><span class="tag">数据结构和算法</span><span class="tag is-grey-lightest">2</span></a></div></div></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button is-primary" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/assets/imgs/001.jpg" alt="PopDemo_Blog" height="28"></a><p class="size-small"><span>&copy; 2020 PopDemo</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/popdemo"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'http://yoursite.com',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
