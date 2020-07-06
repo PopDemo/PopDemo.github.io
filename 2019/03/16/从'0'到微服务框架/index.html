@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>从&#039;0&#039;到微服务框架 - PopDemo_Blog</title><meta description="微服务 理解  背景  从头开发的网上超市！   当时  网站：  用户注册、登录功能 商品展示 下单   总体架构图"><meta property="og:type" content="blog"><meta property="og:title" content="从&#039;0&#039;到微服务框架"><meta property="og:url" content="http://yoursite.com/2019/03/16/%E4%BB%8E&#039;0&#039;%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/"><meta property="og:site_name" content="PopDemo_Blog"><meta property="og:description" content="微服务 理解  背景  从头开发的网上超市！   当时  网站：  用户注册、登录功能 商品展示 下单   总体架构图"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDHNZfTBOGNfP1iMbT0M6R5wLZx2U0i0HSZGIphcON51wGOT4tqzd*XGzoLYHM1BzqyFaTA1x*VJp86wUwhML9OM!/b&amp;bo=TwJ9AQAAAAARFxE!&amp;rf=viewer_4"><meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT.zpvQHazcRVyrCbJXnTUAqTx5Yt1v0rg2MKIH5TT5JV8XoDl8fQKKJr3yTIoY7bhQ!!/b&amp;bo=OARlBQAAAAARB2w!&amp;rf=viewer_4"><meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT.z*LTunIVoBPJGVPpDPrBR*NA.sS9L8XzRUIWadB*npVurorRtZIRaMfubv1G3dwg!!/b&amp;bo=5QLrAQAAAAARBz0!&amp;rf=viewer_4"><meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT2*uGS9tq*cwtxkkTbQl0AhODmhIQCRc2y0z.sRU1gO8dG*TTddQhewBKgOMm.bFlw!!/b&amp;bo=swJtAgAAAAARB.4!&amp;rf=viewer_4"><meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OTxXqXuMLGCrzpkk9yVFN*wCTWeunGy1Iji*NsDK5pCGDI41ImmZkvR8tnPMowpfx1A!!/b&amp;bo=IgSpBAAAAAARB7s!&amp;rf=viewer_4"><meta property="og:image" content="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OTwzMTiK65ZCC2lecq*Tt4Eg9oSOALTk.0VU2j.Ewu.X6obrFCm6CG4FTp8VLSABgNw!!/b&amp;bo=kQFVAQAAAAARB*Q!&amp;rf=viewer_4"><meta property="article:published_time" content="2019-03-16T09:06:53.000Z"><meta property="article:modified_time" content="2020-07-06T03:11:47.239Z"><meta property="article:author" content="PopDemo"><meta property="article:tag" content="微服务"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDHNZfTBOGNfP1iMbT0M6R5wLZx2U0i0HSZGIphcON51wGOT4tqzd*XGzoLYHM1BzqyFaTA1x*VJp86wUwhML9OM!/b&amp;bo=TwJ9AQAAAAARFxE!&amp;rf=viewer_4"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://popdemo.github.io"},"headline":"PopDemo_Blog","image":[],"datePublished":"2019-03-16T09:06:53.000Z","dateModified":"2020-07-06T03:11:47.239Z","author":{"@type":"Person","name":"PopDemo"},"description":"微服务 理解  背景  从头开发的网上超市！   当时  网站：  用户注册、登录功能 商品展示 下单   总体架构图"}</script><link rel="canonical" href="http://yoursite.com/2019/03/16/%E4%BB%8E&#039;0&#039;%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/"><link rel="icon" href="/assets/imgs/favicon.ico"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/assets/imgs/001.jpg" alt="PopDemo_Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/popdemo"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2019-03-16T09:06:53.000Z" title="2019-03-16T09:06:53.000Z">2019-03-16</time><span class="level-item"><a class="link-muted" href="/categories/%E6%A1%86%E6%9E%B6/">框架</a></span><span class="level-item">13 分钟 读完 (大约 1963 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">从&#039;0&#039;到微服务框架</h1><div class="content"><h1 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h1><ul>
+<li><p>理解</p>
+<ul>
+<li><p>背景</p>
+<ul>
+<li>从头开发的网上超市！</li>
+</ul>
+</li>
+<li><p>当时</p>
+<ul>
+<li><p>网站：</p>
+<ul>
+<li>用户注册、登录功能</li>
+<li>商品展示</li>
+<li>下单</li>
+</ul>
+</li>
+<li><p>总体架构图</p>
+<a id="more"></a>
+
+<ul>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/Af1yGqSdppVqA7I0*cpgDHNZfTBOGNfP1iMbT0M6R5wLZx2U0i0HSZGIphcON51wGOT4tqzd*XGzoLYHM1BzqyFaTA1x*VJp86wUwhML9OM!/b&bo=TwJ9AQAAAAARFxE!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>时间（变化）轴</p>
+<ul>
+<li>故事<ul>
+<li>小明和小皮一起创业做网上超市。小明负责程序开发，小皮负责其他事宜。当时互联网还不发达，网上超市还是蓝海。只要功能实现了就能随便赚钱。所以他们的需求很简单，只需要一个网站挂在公网，用户能够在这个网站上浏览商品、购买商品；另外还需一个管理后台，可以管理商品、用户、以及订单数据</li>
+</ul>
+</li>
+<li>随着时代，用户增长，渐渐发生——</li>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT.zpvQHazcRVyrCbJXnTUAqTx5Yt1v0rg2MKIH5TT5JV8XoDl8fQKKJr3yTIoY7bhQ!!/b&bo=OARlBQAAAAARB2w!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+<li><p>知识点简介</p>
+<ul>
+<li><p>抽象出公共服务</p>
+<ul>
+<li>理解<ul>
+<li>也就是抽象出公用的业务能力，来做成公共服务</li>
+</ul>
+</li>
+<li>图<ul>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT.z*LTunIVoBPJGVPpDPrBR*NA.sS9L8XzRUIWadB*npVurorRtZIRaMfubv1G3dwg!!/b&bo=5QLrAQAAAAARBz0!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>烟囱式系统</p>
+<ul>
+<li>缺点<ul>
+<li>数据库成为性能瓶颈，并且有单点故障的风险。</li>
+<li>数据管理趋向混乱。即使一开始有良好的模块化设计，随着时间推移，总会有一个服务直接从数据库取另一个服务的数据的现象。</li>
+<li>数据库表结构可能被多个服务依赖，牵一发而动全身，很难调整</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>监控—–发现故障的征兆</p>
+<ul>
+<li><p>实现步骤</p>
+<ul>
+<li>微服务架构中组件繁多，各个组件所需要监控的指标不同</li>
+<li>比如Redis缓存一般监控占用内存值、网络流量，数据库监控连接数、磁盘空间，业务服务监控并发数、响应延迟、错误率等</li>
+<li>因此如果做一个大而全的监控系统来监控各个组件是不大现实的，而且扩展性会很差  so↓</li>
+<li>一般的做法是让各个组件提供报告自己当前状态的接口（metrics接口），这个接口输出的数据格式应该是一致的。然后部署一个指标采集器组件，定时从这些接口获取并保持组件状态，同时提供查询服务。</li>
+<li>最后还需要一个UI，从指标采集器查询各项指标，绘制监控界面或者根据阈值发出告警</li>
+</ul>
+</li>
+<li><p>定位问题——链路跟踪</p>
+<ul>
+<li>理解<ul>
+<li>通过链路跟踪的方式来对用户调用某个服务时查看所调用的全部接口或服务，另外还需要调用日志收集与存储的组件，以展示链路调用的UI组件<ul>
+<li>这里的UI组件<ul>
+<li>请查找答案</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>网关—权限控制，服务治理</p>
+<ul>
+<li><p>背景</p>
+<ul>
+<li>拆分成微服务后，出现大量的服务，大量的接口，使得整个调用关系乱糟糟的</li>
+<li>经常在开发过程中，写着写着，忽然想不起某个数据应该调用哪个服务。或者写歪了，调用了不该调用的服务，本来一个只读的功能结果修改了数据……</li>
+</ul>
+</li>
+<li><p>解决调用错误接口服务</p>
+<ul>
+<li>so,微服务的调用需要一个把关的东西，也就是网关</li>
+<li>在调用者和被调用者中间加入一层网关，每次调用都会进入<code>权限校验</code>，同时，网关可以作为一个提供服务接口文档的平台</li>
+</ul>
+</li>
+<li><p>使用网关的粒度</p>
+<ul>
+<li>最粗力度<ul>
+<li>指整个微服务一个网关，</li>
+</ul>
+</li>
+<li>最细粒度<ul>
+<li>则是所有调用，不管是微服务内部，调用过着来自外部服务的调用，都要通过网关</li>
+</ul>
+</li>
+<li>折中方案<ul>
+<li>按照业务领域将微服务分成几个区，区内直接调用，区间通过网关调用</li>
+</ul>
+</li>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OT2*uGS9tq*cwtxkkTbQl0AhODmhIQCRc2y0z.sRU1gO8dG*TTddQhewBKgOMm.bFlw!!/b&bo=swJtAgAAAAARB.4!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+<li><p>熔断，服务降级，限流</p>
+<ul>
+<li><p>熔断</p>
+<ul>
+<li>理解<ul>
+<li>当一个服务因为各种原因停止响应时，调用方通常会等待一段时间或者收到了错误返回</li>
+<li>如果调用链路必将长，可能会导致请求堆积，整条链路占用大量资源一直在等待下游（也就是基层）的响应，</li>
+<li>so</li>
+<li>当我们多次访问一个服务失败时，我们应该熔断，标记该服务已停止工作</li>
+</ul>
+</li>
+<li><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OTxXqXuMLGCrzpkk9yVFN*wCTWeunGy1Iji*NsDK5pCGDI41ImmZkvR8tnPMowpfx1A!!/b&bo=IgSpBAAAAAARB7s!&rf=viewer_4" alt="img"></li>
+</ul>
+</li>
+<li><p>服务降级</p>
+<ul>
+<li>背景    <ul>
+<li>当下游的服务停止工作后，如果该服务并非核心业务，则上有服务应该降级，以保证核心业务不中断</li>
+</ul>
+</li>
+<li>实例<ul>
+<li>网上超市的下单页面有一个推荐商品凑单的功能，当该模块挂了后，只需要暂时关闭推荐功能即可</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>限流</p>
+<ul>
+<li><p>当一个服务挂掉后，用户会习惯性的进行重复访问，，这导致一旦服务恢复正常很可能瞬间error</p>
+</li>
+<li><p><img src="http://m.qpic.cn/psc?/V12figq01webP8/EpnZ2Lm61bRtWOHnS20OTwzMTiK65ZCC2lecq*Tt4Eg9oSOALTk.0VU2j.Ewu.X6obrFCm6CG4FTp8VLSABgNw!!/b&bo=kQFVAQAAAAARB*Q!&rf=viewer_4" alt="img"></p>
+</li>
+<li><p>so</p>
+<ul>
+<li><p>服务里需要自我保护–也就是限流，</p>
+<ul>
+<li><p>限流的策略有很多</p>
+<ul>
+<li><p>当单位时间内请求次数过多，丢弃多余的请求，</p>
+</li>
+<li><p>考虑分区限流。仅拒绝来自产生大量请求的服务的请求</p>
+<ul>
+<li>例如商品服务和订单服务都需要访问促销服务</li>
+<li>商品服务由于代码问题发起了大量请求</li>
+<li>促销服务则只限制来自商品服务的请求，来自订单服务的请求则正常响应</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>微服务框架<ul>
+<li>引入组件以及功能<ul>
+<li>指标接口、链路跟踪注入、日志引流、服务注册发现、路由规则等组件以及熔断、限流等功能都需要在应用服务上添加一些对接代码</li>
+</ul>
+</li>
+<li>如果让每个应用服务自己实现是非常耗时耗力的<ul>
+<li>so<ul>
+<li>基于DRY的原则，便有了我们现在如火如荼的微服务框架</li>
+<li>将与各个组件对接的代码和另外一些公共代码抽离到框架中，所有的应用服务都统一使用这套框架进行开发</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>自定义的功能<ul>
+<li>代码级的链路跟踪<ul>
+<li>甚至可以将程序调用堆栈信息注入到链路跟踪，实现代码级别的链路跟踪。或者输出线程池、连接池的状态信息，实时监控服务底层状态</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>框架更新成本很高</li>
+<li>每次框架升级，都需要所有应用服务配合升级</li>
+<li>当然，一般会使用兼容方案，留出一段并行时间等待所有应用服务升级。但是如果应用服务非常多时，升级时间可能会非常漫长。并且有一些很稳定几乎不更新的应用服务，其负责人可能会拒绝升级</li>
+<li>so<ul>
+<li>因此，使用统一微服务框架需要完善的版本管理方法和开发管理规范</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><div class="article-tags size-small is-uppercase mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2019/04/02/%E5%BA%8F%E5%88%97%E5%8C%96%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">序列化介绍和使用</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2019/01/09/%E6%B7%B1%E5%85%A5%E7%BA%A2%E9%BB%91%E6%A0%91%E6%9F%A5%E6%8F%92%E5%88%A0%E7%9A%84%E6%B5%81%E7%A8%8B%E5%BA%95%E5%B1%82-%E5%B9%B6%E6%B7%B1%E5%85%A5%E6%93%8D%E4%BD%9C%E5%90%8E%E7%9A%84%E8%87%AA%E5%B9%B3%E8%A1%A1/"><span class="level-item">深入红黑树查插删的流程底层,并深入操作后的自平衡</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'http://yoursite.com/2019/03/16/%E4%BB%8E'0'%E5%88%B0%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/';
+            this.page.identifier = '2019/03/16/从'0'到微服务框架/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="is-rounded" src="/assets/imgs/001.jpg" alt="PopDemo"></figure><p class="title is-size-4 is-block line-height-inherit">PopDemo</p><p class="is-size-6 is-block">一个完美主义的互联网人</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>ShanXi,ShaanXi,ShangHai</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">18</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">12</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/popdemo" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/popdemo"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/PopDemo2"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile is-mobile" href="https://weibo.com/PopDemo" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Weibo</span></span><span class="level-right"><span class="level-item tag">weibo.com</span></span></a></li><li><a class="level is-mobile is-mobile" href="http://zksrw.top" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Zksrw</span></span><span class="level-right"><span class="level-item tag">zksrw.top</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/JAVA/"><span class="level-start"><span class="level-item">JAVA</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"><span class="level-start"><span class="level-item">Java多线程+</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Linux/"><span class="level-start"><span class="level-item">Linux</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%97%A5%E5%BF%97/"><span class="level-start"><span class="level-item">日志</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE/"><span class="level-start"><span class="level-item">构建项目</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%A1%86%E6%9E%B6/"><span class="level-start"><span class="level-item">框架</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%BB%84%E4%BB%B6/"><span class="level-start"><span class="level-item">组件</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3%E5%8E%9F%E7%90%86/"><span class="level-start"><span class="level-item">计算机相关原理</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2020-07-02T17:52:01.000Z">2020-07-03</time></p><p class="title is-6"><a class="link-muted" href="/2020/07/03/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3CAS-%E8%87%AA%E6%97%8B-%E5%92%8CSynchronized/">深入理解CAS(自旋)和Synchronized</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">Java多线程+</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-01-12T12:30:05.000Z">2020-01-12</time></p><p class="title is-6"><a class="link-muted" href="/2020/01/12/linux%E7%BB%88%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4/">linux终端常用的命令</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Linux/">Linux</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2019-09-19T12:30:27.000Z">2019-09-19</time></p><p class="title is-6"><a class="link-muted" href="/2019/09/19/ActiveMQ/">ActiveMQ</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E7%BB%84%E4%BB%B6/">组件</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2019-07-17T09:06:55.000Z">2019-07-17</time></p><p class="title is-6"><a class="link-muted" href="/2019/07/17/%E9%9B%86%E7%BE%A4-%E5%88%86%E5%B8%83%E5%BC%8F-SOA/">集群/分布式/SOA</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E6%A1%86%E6%9E%B6/">框架</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2019-05-25T15:48:59.000Z">2019-05-25</time></p><p class="title is-6"><a class="link-muted" href="/2019/05/25/%E9%80%8F%E6%9E%90HTTPS/">透析HTTPS</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3%E5%8E%9F%E7%90%86/">计算机相关原理</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2020/07/"><span class="level-start"><span class="level-item">七月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/09/"><span class="level-start"><span class="level-item">九月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/07/"><span class="level-start"><span class="level-item">七月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/05/"><span class="level-start"><span class="level-item">五月 2019</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/04/"><span class="level-start"><span class="level-item">四月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/03/"><span class="level-start"><span class="level-item">三月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2019/01/"><span class="level-start"><span class="level-item">一月 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/03/"><span class="level-start"><span class="level-item">三月 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/02/"><span class="level-start"><span class="level-item">二月 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2018/01/"><span class="level-start"><span class="level-item">一月 2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2017/12/"><span class="level-start"><span class="level-item">十二月 2017</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2017/09/"><span class="level-start"><span class="level-item">九月 2017</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2017/01/"><span class="level-start"><span class="level-item">一月 2017</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/HTTPS%E9%80%9A%E4%BF%A1/"><span class="tag">HTTPS通信</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LomBok/"><span class="tag">LomBok</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MQ/"><span class="tag">MQ</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java%E5%9E%83%E5%9C%BE%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6/"><span class="tag">java垃圾处理机制</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linux/"><span class="tag">linux</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/maven/"><span class="tag">maven</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%AB%98%E5%B9%B6%E5%8F%91/"><span class="tag">多线程高并发</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BA%8F%E5%88%97%E5%8C%96/"><span class="tag">序列化</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"><span class="tag">微服务</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1-SpringCloud/"><span class="tag">微服务-SpringCloud</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"><span class="tag">数据结构和算法</span><span class="tag is-grey-lightest">2</span></a></div></div></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button is-primary" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/assets/imgs/001.jpg" alt="PopDemo_Blog" height="28"></a><p class="size-small"><span>&copy; 2020 PopDemo</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/popdemo"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'http://yoursite.com',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
